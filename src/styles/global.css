@@ -212,10 +212,52 @@ h3 {
   }
 }
 
+/* Mobile Menu */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  padding: 20px 0;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  text-align: center;
+  gap: 0;
+}
+
+.mobile-menu li {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
   }
   
   .grid-2, .grid-3 {
@@ -228,6 +270,36 @@ h3 {
   
   .section {
     padding: 40px 0;
+  }
+  
+  .hero {
+    padding-top: 100px;
+    min-height: 80vh;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  /* Adjust pricing cards on mobile */
+  .pricing-card {
+    margin-bottom: 20px;
+  }
+  
+  /* Improve text sizes on mobile */
+  h1 {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.3rem, 6vw, 2rem);
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
   }
 }
 

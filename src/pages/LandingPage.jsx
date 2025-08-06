@@ -47,7 +47,7 @@ const LandingPage = () => {
             </div>
             <div className="card fade-in">
               <h3>💰 Affordable Pricing</h3>
-              <p>From just R8/month for basic features. Premium at R17/month with advanced AI tools.</p>
+              <p>Basic plan at R8/month, Premium at R17/month. Both include a 3-day free trial - no credit card required!</p>
             </div>
             <div className="card fade-in">
               <h3>🇿🇦 Built for South Africa</h3>
