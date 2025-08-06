@@ -3,9 +3,6 @@ set -e
 
 echo "🚀 Starting Netlify build script for AI Job Chommie"
 
-# Change to the correct directory (root, not frontend)
-cd ..
-
 echo "📍 Current directory: $(pwd)"
 echo "📁 Directory contents:"
 ls -la
@@ -37,9 +34,4 @@ echo "✅ Build completed successfully!"
 echo "📁 Build directory contents:"
 ls -la build/
 
-# Move build contents to where Netlify expects them (frontend/build)
-echo "📂 Setting up frontend/build directory for Netlify..."
-mkdir -p frontend/build
-cp -r build/* frontend/build/
-
-echo "🎉 Netlify build script completed successfully!" 
+echo "🎉 Netlify build script completed successfully!"
