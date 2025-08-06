@@ -1,29 +1,128 @@
-/* AI Job Chommie - Lightweight Neon Theme */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+/* 🔥 AI JOB CHOMMIE - GOD-TIER 3D NEON CYBERPUNK EXPERIENCE 🔥 */
+/* ⚡ SOUTH AFRICAN PRIDE - WORLD-CLASS PROGRAMMING ⚡ */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@100;300;400;500;700;900&family=Rajdhani:wght@200;300;400;500;600;700&family=Share+Tech+Mono:wght@400&display=swap');
 
 :root {
+  /* 💎 LEGENDARY COLOR PALETTE */
   --neon-cyan: #00ffff;
   --neon-pink: #ff00ff;
-  --neon-green: #00ff00;
+  --neon-green: #00ff41;
+  --neon-purple: #9d00ff;
+  --neon-orange: #ff6b00;
   --neon-blue: #0099ff;
-  --bg-primary: #000000;
-  --bg-secondary: #0a0a0a;
-  --text-primary: #ffffff;
-  --text-secondary: #cccccc;
+  --electric-blue: #1e3a8a;
+  --deep-purple: #4c1d95;
+  
+  /* 🌌 ADVANCED BACKGROUNDS */
+  --bg-void: #000000;
+  --bg-matrix: radial-gradient(circle at 20% 50%, #001122 0%, #000000 50%, #110022 100%);
+  --bg-cyber: linear-gradient(145deg, #000814, #001d3d, #003566, #000814);
+  --bg-glass: rgba(0, 20, 40, 0.7);
+  
+  /* ✨ SOPHISTICATED TEXT */
+  --text-chrome: #ffffff;
+  --text-glow: #e0f2fe;
+  --text-shadow: #333333;
+  
+  /* 🎯 3D PERSPECTIVE */
+  --perspective: 1200px;
+  --transform-origin: center;
 }
 
+/* 🚀 RESET & FOUNDATION */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Rajdhani', sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  background: var(--bg-void);
+  background-image: var(--bg-matrix);
+  color: var(--text-chrome);
   line-height: 1.6;
   overflow-x: hidden;
+  perspective: var(--perspective);
+  min-height: 100vh;
+  
+  /* 🔥 CYBERPUNK ANIMATED BACKGROUND */
+  background-attachment: fixed;
+  animation: matrixFlow 20s infinite linear;
+}
+
+@keyframes matrixFlow {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 100% 25%; }
+  50% { background-position: 0% 50%; }
+  75% { background-position: 100% 75%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* 💫 MASTER SPOTLIGHT SYSTEM */
+.spotlight-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.main-spotlight {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 255, 0.4) 0%,
+    rgba(0, 255, 255, 0.2) 20%,
+    rgba(255, 0, 255, 0.15) 40%,
+    rgba(0, 255, 65, 0.1) 60%,
+    transparent 80%
+  );
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: spotlightDance 15s infinite ease-in-out;
+  mix-blend-mode: screen;
+}
+
+@keyframes spotlightDance {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+  25% { transform: translate(-30%, -60%) scale(1.2); opacity: 0.9; }
+  50% { transform: translate(-70%, -40%) scale(1.0); opacity: 0.7; }
+  75% { transform: translate(-40%, -70%) scale(1.3); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+}
+
+.secondary-spotlight {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 255, 0.3) 0%,
+    rgba(157, 0, 255, 0.2) 30%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: secondaryGlow 12s infinite ease-in-out reverse;
+  mix-blend-mode: overlay;
+}
+
+@keyframes secondaryGlow {
+  0% { transform: translate(80%, 20%) scale(0.5); opacity: 0.4; }
+  33% { transform: translate(60%, 80%) scale(0.8); opacity: 0.6; }
+  66% { transform: translate(90%, 50%) scale(0.6); opacity: 0.5; }
+  100% { transform: translate(80%, 20%) scale(0.5); opacity: 0.4; }
 }
 
 /* Typography */
@@ -303,17 +402,376 @@ h3 {
   }
 }
 
-/* Background effects */
+/* 🌟 GOD-TIER 3D HOLOGRAPHIC TYPOGRAPHY */
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  background: linear-gradient(
+    45deg,
+    var(--neon-cyan) 0%,
+    var(--neon-pink) 25%,
+    var(--neon-green) 50%,
+    var(--neon-purple) 75%,
+    var(--neon-cyan) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 400% 400%;
+  animation: rainbowShift 3s ease-in-out infinite;
+  text-shadow: 
+    0 0 10px currentColor,
+    0 0 20px currentColor,
+    0 0 40px currentColor,
+    0 0 80px currentColor;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateZ(-50px) scale(1.1);
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+@keyframes rainbowShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ⚡ LEGENDARY 3D CARDS */
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 20, 40, 0.95) 0%,
+    rgba(0, 40, 80, 0.9) 50%,
+    rgba(0, 20, 40, 0.95) 100%
+  );
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 30px 0;
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 
+    0 20px 40px rgba(0, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 1px rgba(0, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.8s;
+  z-index: 1;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card:hover {
+  transform: translateY(-20px) rotateX(10deg) rotateY(5deg) translateZ(50px);
+  box-shadow: 
+    0 40px 80px rgba(0, 255, 255, 0.3),
+    0 0 100px rgba(255, 0, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: var(--neon-cyan);
+}
+
+/* 🚀 FUTURISTIC BUTTONS */
+.btn {
+  padding: 20px 40px;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue), var(--neon-purple));
+  color: var(--bg-void);
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.6),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px) scale(1.05) rotateX(5deg);
+  box-shadow: 
+    0 15px 40px rgba(0, 255, 255, 0.8),
+    0 0 60px rgba(255, 0, 255, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--neon-pink);
+  border: 3px solid var(--neon-pink);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 255, 0.4),
+    inset 0 0 20px rgba(255, 0, 255, 0.1);
+  text-shadow: 0 0 10px currentColor;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple));
+  color: var(--bg-void);
+  border-color: var(--neon-purple);
+  transform: translateY(-5px) scale(1.05) rotateX(-5deg);
+  box-shadow: 
+    0 15px 40px rgba(255, 0, 255, 0.8),
+    0 0 60px rgba(157, 0, 255, 0.4);
+}
+
+/* 🌌 EPIC NAVIGATION */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 20, 40, 0.9) 50%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  padding: 20px 0;
+}
+
+.nav-links a {
+  color: var(--text-glow);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
+  border-radius: 25px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.nav-links a:hover::before {
+  opacity: 0.2;
+}
+
+.nav-links a:hover {
+  color: var(--neon-cyan);
+  text-shadow: 
+    0 0 10px currentColor,
+    0 0 20px currentColor;
+  transform: translateY(-2px);
+}
+
+/* 💫 LEGENDARY LOGO SPOTLIGHT */
+.logo {
+  width: 60px;
+  height: 60px;
+  filter: 
+    drop-shadow(0 0 20px var(--neon-cyan))
+    drop-shadow(0 0 40px var(--neon-pink))
+    drop-shadow(0 0 60px var(--neon-green));
+  transition: all 0.3s ease;
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.logo:hover {
+  transform: scale(1.2) rotate(10deg);
+  filter: 
+    drop-shadow(0 0 30px var(--neon-cyan))
+    drop-shadow(0 0 60px var(--neon-pink))
+    drop-shadow(0 0 90px var(--neon-green));
+}
+
+/* 🎯 MATRIX DIGITAL RAIN */
+.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.1;
+  background-image: 
+    linear-gradient(transparent, var(--neon-green)),
+    linear-gradient(90deg, transparent, var(--neon-cyan));
+  background-size: 2px 100%, 100% 2px;
+  animation: matrixRain 10s linear infinite;
+}
+
+@keyframes matrixRain {
+  0% { background-position: 0% 0%, 0% 0%; }
+  100% { background-position: 0% 100%, 100% 0%; }
+}
+
+/* 🌟 HERO SECTION GODMODE */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  perspective: 2000px;
+  background: 
+    radial-gradient(ellipse at center, rgba(0, 100, 200, 0.1) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 0, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+/* 🔥 ADVANCED BACKGROUND EFFECTS */
 .bg-pattern {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.1;
+  opacity: 0.15;
   background-image: 
-    radial-gradient(circle at 25% 25%, var(--neon-cyan) 2px, transparent 2px),
-    radial-gradient(circle at 75% 75%, var(--neon-pink) 2px, transparent 2px);
-  background-size: 60px 60px;
+    radial-gradient(circle at 20% 20%, var(--neon-cyan) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, var(--neon-pink) 1px, transparent 1px),
+    radial-gradient(circle at 40% 60%, var(--neon-green) 1px, transparent 1px),
+    radial-gradient(circle at 60% 40%, var(--neon-purple) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px, 100px 100px, 120px 120px;
+  background-position: 0 0, 25px 25px, 50px 50px, 75px 75px;
+  animation: starField 30s linear infinite;
   z-index: -1;
+}
+
+@keyframes starField {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-100px) rotate(360deg); }
+}
+
+/* 🚀 SOUTH AFRICAN PRIDE ELEMENTS */
+.sa-flag-accent {
+  background: linear-gradient(
+    135deg,
+    #ff0000 0%,
+    #ffffff 20%,
+    #0000ff 40%,
+    #ffffff 60%,
+    #00ff00 80%,
+    #ffff00 100%
+  );
+  background-size: 400% 400%;
+  animation: flagWave 8s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes flagWave {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 100%; }
+}
+
+/* ⚡ TIA.ORG.ZA PARTNERSHIP READY */
+.partnership-ready {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 255, 255, 0.1) 0%,
+    rgba(255, 0, 255, 0.1) 50%,
+    rgba(0, 255, 65, 0.1) 100%
+  );
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 
+    0 0 50px rgba(0, 255, 255, 0.3),
+    inset 0 0 50px rgba(255, 0, 255, 0.1);
+  animation: partnershipGlow 6s ease-in-out infinite;
+}
+
+@keyframes partnershipGlow {
+  0%, 100% { 
+    box-shadow: 
+      0 0 50px rgba(0, 255, 255, 0.3),
+      inset 0 0 50px rgba(255, 0, 255, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 100px rgba(0, 255, 255, 0.6),
+      inset 0 0 100px rgba(255, 0, 255, 0.2),
+      0 0 150px rgba(0, 255, 65, 0.4);
+  }
 }

@@ -7,6 +7,16 @@ import AnnouncementBanner from '../components/AnnouncementBanner';
 const LandingPage = () => {
   return (
     <div>
+      {/* 💫 GOD-TIER SPOTLIGHT SYSTEM */}
+      <div className="spotlight-container">
+        <div className="main-spotlight" style={{ left: '50%', top: '50%' }}></div>
+        <div className="secondary-spotlight" style={{ left: '20%', top: '30%' }}></div>
+        <div className="secondary-spotlight" style={{ left: '80%', top: '70%', animationDelay: '-5s' }}></div>
+      </div>
+      
+      {/* 🎯 MATRIX DIGITAL RAIN */}
+      <div className="matrix-rain"></div>
+      
       <Navigation />
       <AnnouncementBanner />
       
