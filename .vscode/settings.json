@@ -1,0 +1,9 @@
+{
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true,
+    "MutableAI.upsell": true,
+    "cSpell.words": [
+        "Steyn"
+    ],
+    "git.ignoreLimitWarning": true
+}
