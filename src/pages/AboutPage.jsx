@@ -27,8 +27,8 @@ const AboutPage = () => {
               <span className="text-gradient">About AI Job Chommie</span>
             </h1>
             <p style={{ fontSize: '1.4rem', color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
-              Born from the heart of <span className="sa-highlight">Port Elizabeth</span>, we're revolutionizing 
-              job search for every South African through cutting-edge AI technology.
+              Born from the heart of <span className="sa-highlight">Port Elizabeth</span>, we're democratizing 
+              employment opportunities for every South African through revolutionary AI technology that understands our unique job market.
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@ const AboutPage = () => {
             <div className="card hover-card">
               <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>💰</div>
               <h3 style={{ color: 'var(--primary-magenta)' }}>Unbeatable Affordability</h3>
-              <p>At R99-R299/month, we're 10x more affordable than traditional recruitment agencies while 
+              <p>Starting at just R8/month with a 3-day free trial, we're 50x more affordable than traditional recruitment agencies while 
               providing superior AI-powered matching and career support services.</p>
             </div>
             <div className="card hover-card">
