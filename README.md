@@ -1,5 +1,7 @@
 # AI Job Chommie Website
 
+🔥 **Enhanced Hero Section Now Live!** 🔥
+
 A beautiful, lightweight website for AI Job Chommie - your intelligent job search companion for South Africa.
 
 ## 🚀 Features
