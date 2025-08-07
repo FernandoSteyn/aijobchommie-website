@@ -166,7 +166,7 @@ const LandingPage = () => {
         <div className="container">
           <Logo size={40} />
           <p style={{ margin: '20px 0' }}>
-            © 2025 AI Job Chommie. All rights reserved.
+            © 2025 AI Job Chommie. All rights reserved. | Deployed: 2025-08-07
           </p>
           <p style={{ margin: '20px 0', fontSize: '0.9rem', opacity: '0.8' }}>
             Made from the heart for all South African job seekers by yours truly, with love, Fernando Steyn
