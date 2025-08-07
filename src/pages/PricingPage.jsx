@@ -45,17 +45,19 @@ const PricingPage = () => {
                 R8<span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>/month</span>
               </div>
               <p style={{ marginBottom: '20px', color: 'var(--neon-green)', fontWeight: 'bold' }}>✨ 3-Day Free Trial</p>
-              <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>Perfect for most job seekers</p>
+              <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>Perfect for active job seekers</p>
               
               <ul style={{ textAlign: 'left', marginBottom: '30px', listStyle: 'none' }}>
-                <li style={{ marginBottom: '10px' }}>✅ 100 job applications per month</li>
+                <li style={{ marginBottom: '10px' }}>✅ 10 job applications per month</li>
                 <li style={{ marginBottom: '10px' }}>✅ AI-powered job matching</li>
                 <li style={{ marginBottom: '10px' }}>✅ Real-time notifications</li>
                 <li style={{ marginBottom: '10px' }}>✅ Basic AI cover letter assistance</li>
                 <li style={{ marginBottom: '10px' }}>✅ CV optimization tips</li>
                 <li style={{ marginBottom: '10px' }}>✅ Email support</li>
-                <li style={{ marginBottom: '10px' }}>❌ Advanced analytics</li>
-                <li style={{ marginBottom: '10px' }}>❌ Priority support</li>
+                <li style={{ marginBottom: '10px' }}>✅ Mobile PWA access</li>
+                <li style={{ marginBottom: '10px', color: 'var(--text-muted)' }}>❌ Advanced analytics</li>
+                <li style={{ marginBottom: '10px', color: 'var(--text-muted)' }}>❌ Priority support</li>
+                <li style={{ marginBottom: '10px', color: 'var(--text-muted)' }}>❌ Personal career consultant</li>
               </ul>
               
               <Link to="#" className="btn btn-primary" style={{ width: '100%', marginBottom: '10px' }}>Start 3-Day Trial</Link>
@@ -95,10 +97,57 @@ const PricingPage = () => {
                 <li style={{ marginBottom: '10px' }}>✅ Priority WhatsApp support</li>
                 <li style={{ marginBottom: '10px' }}>✅ Salary negotiation guidance</li>
                 <li style={{ marginBottom: '10px' }}>✅ Personal career consultant</li>
+                <li style={{ marginBottom: '10px' }}>✅ Resume builder & templates</li>
               </ul>
               
               <Link to="#" className="btn btn-primary" style={{ width: '100%', background: 'linear-gradient(45deg, var(--neon-pink), var(--neon-blue))', marginBottom: '10px' }}>Start 3-Day Trial</Link>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>No credit card required</p>
+            </div>
+
+            {/* Enterprise Plan */}
+            <div className="card" style={{ textAlign: 'center', position: 'relative', border: '2px solid var(--neon-green)', gridColumn: 'span 2' }}>
+              <div style={{ 
+                position: 'absolute', 
+                top: '-10px', 
+                left: '50%', 
+                transform: 'translateX(-50%)', 
+                background: 'var(--neon-green)', 
+                color: 'var(--bg-primary)', 
+                padding: '5px 15px', 
+                borderRadius: '15px', 
+                fontSize: '0.8rem', 
+                fontWeight: 'bold' 
+              }}>
+                FOR BUSINESSES
+              </div>
+              <h3 style={{ marginBottom: '20px', color: 'var(--neon-green)' }}>Enterprise Plan</h3>
+              <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--neon-green)', marginBottom: '10px' }}>
+                Custom<span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}> pricing</span>
+              </div>
+              <p style={{ marginBottom: '20px', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>🚀 Custom Demo Available</p>
+              <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>For companies hiring at scale</p>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-lg)', textAlign: 'left' }}>
+                <ul style={{ listStyle: 'none' }}>
+                  <li style={{ marginBottom: '10px' }}>✅ <strong>Unlimited</strong> job postings</li>
+                  <li style={{ marginBottom: '10px' }}>✅ AI-powered candidate screening</li>
+                  <li style={{ marginBottom: '10px' }}>✅ Advanced analytics dashboard</li>
+                  <li style={{ marginBottom: '10px' }}>✅ Custom integration APIs</li>
+                  <li style={{ marginBottom: '10px' }}>✅ Dedicated account manager</li>
+                </ul>
+                <ul style={{ listStyle: 'none' }}>
+                  <li style={{ marginBottom: '10px' }}>✅ White-label solutions</li>
+                  <li style={{ marginBottom: '10px' }}>✅ Bulk candidate sourcing</li>
+                  <li style={{ marginBottom: '10px' }}>✅ Interview scheduling automation</li>
+                  <li style={{ marginBottom: '10px' }}>✅ Custom reporting</li>
+                  <li style={{ marginBottom: '10px' }}>✅ 24/7 priority support</li>
+                </ul>
+              </div>
+              
+              <div style={{ marginTop: 'var(--space-lg)' }}>
+                <Link to="#" className="btn btn-primary" style={{ background: 'linear-gradient(45deg, var(--neon-green), var(--neon-cyan))', marginRight: 'var(--space-md)' }}>Request Demo</Link>
+                <Link to="#" className="btn btn-secondary" style={{ color: 'var(--neon-green)', borderColor: 'var(--neon-green)' }}>Contact Sales</Link>
+              </div>
             </div>
             
           </div>
