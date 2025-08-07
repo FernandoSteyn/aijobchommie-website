@@ -1,0 +1,103 @@
+name: Emergency Website Deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description: 'Deployment Target'
+        required: true
+        default: 'github-pages'
+        type: choice
+        options:
+        - github-pages
+        - netlify
+        - both
+
+jobs:
+  emergency-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: |
+          echo "📦 Installing dependencies..."
+          npm ci
+
+      - name: Create CNAME File
+        run: |
+          echo "🔧 Setting up domain..."
+          echo "aijobchommie.co.za" > public/CNAME
+
+      - name: Build Application
+        run: |
+          echo "🏗️ Building application..."
+          npm run build
+          
+          # Ensure CNAME is in build directory
+          cp public/CNAME build/CNAME
+          
+          # Verify build
+          if [ ! -f "build/index.html" ]; then
+            echo "❌ Build failed"
+            exit 1
+          fi
+          
+          echo "✅ Build successful"
+
+      - name: Deploy to GitHub Pages
+        if: github.event.inputs.deployment_target == 'github-pages' || github.event.inputs.deployment_target == 'both'
+        run: |
+          echo "🚀 Deploying to GitHub Pages..."
+          
+          # Configure git
+          git config --local user.email "action@github.com"
+          git config --local user.name "Emergency Deploy Bot"
+          
+          # Deploy using gh-pages
+          npm run deploy
+
+      - name: Deploy to Netlify
+        if: github.event.inputs.deployment_target == 'netlify' || github.event.inputs.deployment_target == 'both'
+        run: |
+          echo "🚀 Deploying to Netlify..."
+          
+          if [ -n "${{ secrets.NETLIFY_DEPLOY_HOOK }}" ]; then
+            curl -X POST -d {} "${{ secrets.NETLIFY_DEPLOY_HOOK }}"
+            echo "✅ Netlify deployment triggered"
+          else
+            echo "⚠️ Netlify deploy hook not configured"
+          fi
+
+      - name: Verify Deployment
+        run: |
+          echo "⏳ Waiting for deployment to propagate..."
+          sleep 60
+          
+          for i in {1..10}; do
+            HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://aijobchommie.co.za || echo "000")
+            if [ "$HTTP_STATUS" = "200" ]; then
+              echo "✅ Website is live! (HTTP $HTTP_STATUS)"
+              break
+            else
+              echo "⏳ Attempt $i/10: Checking... (HTTP $HTTP_STATUS)"
+              sleep 30
+            fi
+          done
+
+      - name: Create Status Report
+        run: |
+          echo "📊 EMERGENCY DEPLOYMENT REPORT"
+          echo "=============================="
+          echo "Timestamp: $(date)"
+          echo "Target: ${{ github.event.inputs.deployment_target }}"
+          echo "Build Size: $(du -sh build/ | cut -f1)"
+          echo "Status: COMPLETED"
+          echo "=============================="

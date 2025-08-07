@@ -2,11 +2,14 @@ name: Automated Website Maintenance
 
 on:
   schedule:
-    # Run every 6 hours
-    - cron: '0 */6 * * *'
+    # Run every 2 hours for maximum uptime
+    - cron: '0 */2 * * *'
   workflow_dispatch: # Allow manual trigger
   push:
     branches: [main, master]
+  # Emergency response to website issues
+  repository_dispatch:
+    types: [emergency-deploy]
 
 env:
   NODE_VERSION: '18'
@@ -112,6 +115,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Automated Maintenance Bot"
           
+          # Force deploy to GitHub Pages
+          npm run deploy
+          
           # Commit changes if any
           if ! git diff --quiet; then
             git add .
@@ -120,6 +126,12 @@ jobs:
             echo "✅ Automated fixes deployed"
           else
             echo "ℹ️ No changes needed"
+          fi
+          
+          # Trigger Netlify deploy if configured
+          if [ -n "${{ secrets.NETLIFY_DEPLOY_HOOK }}" ]; then
+            curl -X POST -d {} "${{ secrets.NETLIFY_DEPLOY_HOOK }}"
+            echo "✅ Netlify deployment triggered"
           fi
 
       - name: Verify Fix
