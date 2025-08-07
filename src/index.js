@@ -1,17 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/global.css';
 import LoadingScreen from './components/LoadingScreen';
-import LandingPage from './pages/LandingPage';
-import AboutPage from './pages/AboutPage';
-import MissionPage from './pages/MissionPage';
-import FounderPage from './pages/FounderPage';
-import TermsPage from './pages/TermsPage';
-import PrivacyPage from './pages/PrivacyPage';
-import PricingPage from './pages/PricingPage';
-import ContactPage from './pages/ContactPage';
-import RefundPage from './pages/RefundPage';
+import ErrorBoundary from './components/ErrorBoundary';
+
+// Lazy load pages for better performance
+const LandingPage = lazy(() => import('./pages/LandingPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const MissionPage = lazy(() => import('./pages/MissionPage'));
+const FounderPage = lazy(() => import('./pages/FounderPage'));
+const TermsPage = lazy(() => import('./pages/TermsPage'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const RefundPage = lazy(() => import('./pages/RefundPage'));
+
+// Loading fallback for page transitions
+const PageLoadingFallback = () => (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '50vh',
+    flexDirection: 'column',
+    gap: 'var(--space-lg)'
+  }}>
+    <div style={{
+      width: '60px',
+      height: '60px',
+      border: '4px solid rgba(0, 255, 255, 0.3)',
+      borderTop: '4px solid var(--primary-cyan)',
+      borderRadius: '50%',
+      animation: 'spin 1s linear infinite'
+    }} />
+    <p style={{ color: 'var(--primary-cyan)', fontSize: '1.1rem' }}>
+      ⚡ Loading page...
+    </p>
+  </div>
+);
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,17 +52,21 @@ const App = () => {
       {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
       {!isLoading && (
         <Router>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/mission" element={<MissionPage />} />
-            <Route path="/founder" element={<FounderPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/refund" element={<RefundPage />} />
-          </Routes>
+          <ErrorBoundary>
+            <Suspense fallback={<PageLoadingFallback />}>
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/mission" element={<MissionPage />} />
+                <Route path="/founder" element={<FounderPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/refund" element={<RefundPage />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
         </Router>
       )}
     </React.StrictMode>
