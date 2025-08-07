@@ -82,6 +82,10 @@ const GeometricBackground = () => {
           case 2: // Hexagon
             this.drawHexagon();
             break;
+          default:
+            // Default to triangle if type is unexpected
+            this.drawTriangle();
+            break;
         }
         
         ctx.stroke();

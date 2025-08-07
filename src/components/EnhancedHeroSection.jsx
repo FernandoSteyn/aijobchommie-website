@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
@@ -11,8 +11,8 @@ const EnhancedHeroSection = () => {
   const [jobStats, setJobStats] = useState({ active: 10000, matched: 500, success: 95 });
   const heroRef = useRef(null);
 
-  // Code samples for live visualization
-  const codeSamples = [
+  // Code samples for live visualization - wrapped in useMemo to prevent recreation on every render
+  const codeSamples = useMemo(() => [
     {
       language: 'React',
       lines: [
@@ -62,7 +62,7 @@ const EnhancedHeroSection = () => {
         '{ "matches": 127, "confidence": 96% }'
       ]
     }
-  ];
+  ], []);
 
   // Timeline steps
   const timelineSteps = [
@@ -106,7 +106,7 @@ const EnhancedHeroSection = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [timelineSteps.length]);
 
   // Launch countdown
   useEffect(() => {
