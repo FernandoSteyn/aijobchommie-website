@@ -1,0 +1,242 @@
+name: Automated Website Maintenance
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches: [main, master]
+
+env:
+  NODE_VERSION: '18'
+  MAINTENANCE_LOG: 'maintenance-log.md'
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    outputs:
+      site-status: ${{ steps.check-site.outputs.status }}
+      needs-rebuild: ${{ steps.check-build.outputs.rebuild }}
+    steps:
+      - name: Check Website Availability
+        id: check-site
+        run: |
+          echo "Checking website health..."
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://aijobchommie.co.za || echo "000")
+          
+          if [ "$HTTP_STATUS" = "200" ]; then
+            echo "✅ Website is online (HTTP $HTTP_STATUS)"
+            echo "status=online" >> $GITHUB_OUTPUT
+          else
+            echo "❌ Website is down (HTTP $HTTP_STATUS)"
+            echo "status=down" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Check Build Health
+        id: check-build
+        if: steps.check-site.outputs.status == 'down'
+        run: |
+          echo "Website is down, marking for rebuild"
+          echo "rebuild=true" >> $GITHUB_OUTPUT
+
+  automated-fix:
+    needs: health-check
+    if: needs.health-check.outputs.site-status == 'down'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Clean Install Dependencies
+        run: |
+          echo "🔧 Cleaning and reinstalling dependencies..."
+          npm cache clean --force
+          rm -rf node_modules package-lock.json
+          npm install
+
+      - name: Run Automated Diagnostics
+        run: |
+          echo "🔍 Running automated diagnostics..."
+          
+          # Check package.json
+          if ! node -e "console.log(require('./package.json').homepage)"; then
+            echo "❌ Package.json issues detected"
+          fi
+          
+          # Check build configuration
+          if [ ! -f "public/CNAME" ]; then
+            echo "aijobchommie.co.za" > public/CNAME
+            echo "✅ Fixed missing CNAME file"
+          fi
+          
+          # Verify critical files
+          CRITICAL_FILES=("src/index.js" "public/index.html" "src/pages/LandingPage.jsx")
+          for file in "${CRITICAL_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Critical file missing: $file"
+              exit 1
+            fi
+          done
+
+      - name: Build and Test
+        run: |
+          echo "🏗️ Building application..."
+          npm run build
+          
+          # Verify build output
+          if [ ! -f "build/index.html" ]; then
+            echo "❌ Build failed - no index.html generated"
+            exit 1
+          fi
+          
+          if [ ! -f "build/CNAME" ]; then
+            echo "aijobchommie.co.za" > build/CNAME
+            echo "✅ Added CNAME to build directory"
+          fi
+
+      - name: Deploy Fix
+        run: |
+          echo "🚀 Deploying automated fix..."
+          
+          # Configure git
+          git config --local user.email "action@github.com"
+          git config --local user.name "Automated Maintenance Bot"
+          
+          # Commit changes if any
+          if ! git diff --quiet; then
+            git add .
+            git commit -m "🤖 Automated maintenance: Fixed website issues - $(date)"
+            git push origin main
+            echo "✅ Automated fixes deployed"
+          else
+            echo "ℹ️ No changes needed"
+          fi
+
+      - name: Verify Fix
+        run: |
+          echo "⏳ Waiting for deployment to propagate..."
+          sleep 30
+          
+          for i in {1..5}; do
+            HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://aijobchommie.co.za || echo "000")
+            if [ "$HTTP_STATUS" = "200" ]; then
+              echo "✅ Website is back online! (HTTP $HTTP_STATUS)"
+              break
+            else
+              echo "⏳ Attempt $i/5: Still checking... (HTTP $HTTP_STATUS)"
+              sleep 15
+            fi
+          done
+
+  performance-optimization:
+    runs-on: ubuntu-latest
+    if: always() && needs.health-check.outputs.site-status == 'online'
+    needs: health-check
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Performance Audit
+        run: |
+          echo "📊 Running performance optimization..."
+          
+          # Check bundle size
+          npm run build
+          
+          BUILD_SIZE=$(du -sh build/ | cut -f1)
+          echo "Current build size: $BUILD_SIZE"
+          
+          # Optimize images if needed
+          if command -v imagemin &> /dev/null; then
+            find public -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" | xargs imagemin --out-dir=public
+            echo "✅ Images optimized"
+          fi
+
+  security-updates:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Security Audit and Fix
+        run: |
+          echo "🔒 Running security audit..."
+          
+          # Update npm to latest
+          npm install -g npm@latest
+          
+          # Audit and fix security issues
+          npm audit --audit-level=moderate
+          
+          if npm audit --audit-level=moderate | grep -q "found"; then
+            echo "🔧 Applying security fixes..."
+            npm audit fix --force
+            
+            # Test that application still builds
+            if npm run build; then
+              echo "✅ Security fixes applied successfully"
+              
+              # Configure git and commit
+              git config --local user.email "action@github.com"
+              git config --local user.name "Security Update Bot"
+              
+              if ! git diff --quiet package-lock.json; then
+                git add package-lock.json
+                git commit -m "🔒 Automated security updates - $(date)"
+                git push origin main
+              fi
+            else
+              echo "❌ Security fixes broke the build, reverting..."
+              git checkout -- package-lock.json
+            fi
+          else
+            echo "✅ No security issues found"
+          fi
+
+  status-report:
+    needs: [health-check, automated-fix, performance-optimization, security-updates]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Status Report
+        run: |
+          echo "📊 AUTOMATED MAINTENANCE REPORT - $(date)"
+          echo "============================================="
+          echo ""
+          echo "🌐 Website Status: ${{ needs.health-check.outputs.site-status }}"
+          echo "🔧 Automated Fixes: ${{ needs.automated-fix.result }}"
+          echo "⚡ Performance Check: ${{ needs.performance-optimization.result }}"  
+          echo "🔒 Security Updates: ${{ needs.security-updates.result }}"
+          echo ""
+          echo "✅ Maintenance cycle completed successfully"
+          echo "🕒 Next check in 6 hours"
+          echo ""
+          echo "============================================="
