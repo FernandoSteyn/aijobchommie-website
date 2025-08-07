@@ -5,9 +5,12 @@ import './styles/global.css';
 import LoadingScreen from './components/LoadingScreen';
 import LandingPage from './pages/LandingPage';
 import AboutPage from './pages/AboutPage';
+import MissionPage from './pages/MissionPage';
+import FounderPage from './pages/FounderPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import PricingPage from './pages/PricingPage';
+import ContactPage from './pages/ContactPage';
 import RefundPage from './pages/RefundPage';
 
 const App = () => {
@@ -25,9 +28,12 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/mission" element={<MissionPage />} />
+            <Route path="/founder" element={<FounderPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/refund" element={<RefundPage />} />
           </Routes>
         </Router>

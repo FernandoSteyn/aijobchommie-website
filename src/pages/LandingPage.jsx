@@ -92,41 +92,53 @@ const LandingPage = () => {
       <section className="section">
         <div className="container">
           <div className="grid grid-2">
-            <div className="card">
-              <h2>Our Mission</h2>
-              <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
-                To democratize job searching through affordable AI technology, 
-                helping every South African find their perfect job match. Born from 
-                the heart of Port Elizabeth, we understand the struggle of job hunting 
-                and we're here to make it easier.
-              </p>
-            </div>
-            <div className="card">
-              <h2>Meet the Founder</h2>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                <div style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  borderRadius: '50%', 
-                  background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-pink))',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '1.5rem',
-                  fontWeight: 'bold',
-                  color: 'var(--bg-primary)'
-                }}>
-                  FS
-                </div>
-                <div>
-                  <h3>Fernando Steyn</h3>
-                  <p style={{ fontStyle: 'italic', color: 'var(--text-secondary)' }}>
-                    "As a welder who faced unemployment, I understand the struggle. 
-                    This app is my way of giving back to the community."
-                  </p>
+            <Link to="/mission" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="card hover-card" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
+                <h2 style={{ color: 'var(--primary-cyan)' }}>Our Mission</h2>
+                <p style={{ fontSize: '1.2rem', lineHeight: '1.8', marginBottom: 'var(--space-md)' }}>
+                  To democratize job searching through affordable AI technology, 
+                  helping every South African find their perfect job match. Born from 
+                  the heart of Port Elizabeth, we understand the struggle of job hunting 
+                  and we're here to make it easier.
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', color: 'var(--primary-cyan)', fontSize: '0.9rem', fontWeight: '600' }}>
+                  <span>Learn more about our mission</span>
+                  <span style={{ marginLeft: 'var(--space-sm)' }}>→</span>
                 </div>
               </div>
-            </div>
+            </Link>
+            <Link to="/founder" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="card hover-card" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
+                <h2 style={{ color: 'var(--primary-magenta)' }}>Meet the Founder</h2>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: 'var(--space-md)' }}>
+                  <div style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    borderRadius: '50%', 
+                    background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-pink))',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.5rem',
+                    fontWeight: 'bold',
+                    color: 'var(--bg-primary)'
+                  }}>
+                    FS
+                  </div>
+                  <div>
+                    <h3>Fernando Steyn</h3>
+                    <p style={{ fontStyle: 'italic', color: 'var(--text-secondary)' }}>
+                      "As a welder who faced unemployment, I understand the struggle. 
+                      This app is my way of giving back to the community."
+                    </p>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', color: 'var(--primary-magenta)', fontSize: '0.9rem', fontWeight: '600' }}>
+                  <span>Discover Fernando's story</span>
+                  <span style={{ marginLeft: 'var(--space-sm)' }}>→</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

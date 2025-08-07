@@ -1,20 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import ParticleSystem from '../components/ParticleSystem';
+import GeometricBackground from '../components/GeometricBackground';
 
 const PricingPage = () => {
   return (
     <div>
+      {/* Background Effects */}
+      <GeometricBackground />
+      <ParticleSystem />
+      
+      {/* Cinematic Lighting */}
+      <div className="spotlight-container">
+        <div className="main-spotlight" style={{ left: '30%', top: '20%' }}></div>
+        <div className="secondary-spotlight" style={{ left: '70%', top: '60%', animationDelay: '-3s' }}></div>
+      </div>
+      
       <Navigation />
       
       {/* Hero Section */}
-      <section className="hero" style={{ minHeight: '60vh', paddingTop: '120px' }}>
+      <section className="hero" style={{ minHeight: '70vh', paddingTop: '120px' }}>
         <div className="container">
-          <div className="fade-in">
-            <h1 style={{ marginBottom: '20px' }}>Choose Your Plan</h1>
-            <p style={{ fontSize: '1.3rem', color: 'var(--text-secondary)', marginBottom: '60px' }}>
-              Affordable AI-powered job search solutions for every South African
+          <div className="fade-in" style={{ textAlign: 'center' }}>
+            <h1 style={{ marginBottom: '30px' }}>
+              <span className="text-gradient">Choose Your Plan</span>
+            </h1>
+            <p style={{ fontSize: '1.4rem', color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
+              Affordable AI-powered job search solutions designed specifically for South African job seekers. 
+              Start your career transformation today with our industry-leading technology.
             </p>
+            <div className="grid grid-3" style={{ maxWidth: '600px', margin: '0 auto', gap: 'var(--space-lg)' }}>
+              <div className="fade-in">
+                <div className="stat-number" style={{ color: 'var(--primary-cyan)' }}>50x</div>
+                <div className="stat-label">More Affordable</div>
+              </div>
+              <div className="fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="stat-number" style={{ color: 'var(--accent-lime)' }}>3</div>
+                <div className="stat-label">Day Free Trial</div>
+              </div>
+              <div className="fade-in" style={{ animationDelay: '0.4s' }}>
+                <div className="stat-number" style={{ color: 'var(--primary-magenta)' }}>30</div>
+                <div className="stat-label">Day Money-Back</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -150,6 +179,150 @@ const PricingPage = () => {
               </div>
             </div>
             
+          </div>
+        </div>
+      </section>
+
+      {/* Value Proposition */}
+      <section className="section">
+        <div className="container">
+          <div className="fade-in" style={{ textAlign: 'center', marginBottom: 'var(--space-4xl)' }}>
+            <h2 style={{ marginBottom: 'var(--space-md)' }}>Why Choose AI Job Chommie?</h2>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto' }}>
+              Compare our revolutionary AI-powered platform against traditional job search methods and see why thousands of South Africans trust us.
+            </p>
+          </div>
+          
+          <div className="grid grid-3" style={{ gap: 'var(--space-xl)' }}>
+            <div className="card" style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>⚡</div>
+              <h3 style={{ color: 'var(--primary-cyan)', marginBottom: 'var(--space-md)' }}>Lightning Fast</h3>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
+                Traditional job boards take weeks to show results. Our AI matches you with perfect opportunities in seconds, not months.
+              </p>
+            </div>
+            <div className="card" style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>💰</div>
+              <h3 style={{ color: 'var(--accent-lime)', marginBottom: 'var(--space-md)' }}>50x More Affordable</h3>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
+                Recruitment agencies charge R400-R2000/month. Get superior AI technology starting at just R8/month with no hidden fees.
+              </p>
+            </div>
+            <div className="card" style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>🎯</div>
+              <h3 style={{ color: 'var(--primary-magenta)', marginBottom: 'var(--space-md)' }}>Precision Matching</h3>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
+                Stop applying to irrelevant jobs. Our AI analyzes your skills and matches you with positions where you'll actually get hired.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed Feature Comparison */}
+      <section className="section" style={{ background: 'var(--bg-secondary)' }}>
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-4xl)' }}>Feature Comparison</h2>
+          
+          <div className="card" style={{ overflow: 'hidden' }}>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+                <thead>
+                  <tr style={{ background: 'rgba(0, 255, 255, 0.1)' }}>
+                    <th style={{ padding: 'var(--space-md)', textAlign: 'left', borderBottom: '2px solid var(--primary-cyan)' }}>Feature</th>
+                    <th style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '2px solid var(--primary-cyan)', color: 'var(--primary-cyan)' }}>Basic Plan</th>
+                    <th style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '2px solid var(--primary-magenta)', color: 'var(--primary-magenta)' }}>Premium Plan</th>
+                    <th style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '2px solid var(--accent-lime)', color: 'var(--accent-lime)' }}>Enterprise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style={{ padding: 'var(--space-md)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Monthly Applications</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>10</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>Unlimited</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>Unlimited</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: 'var(--space-md)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>AI Job Matching</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓ Advanced</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓ Custom</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: 'var(--space-md)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>CV/Cover Letter AI</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>Basic</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓ Full</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓ Custom</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: 'var(--space-md)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Career Analytics</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--text-muted)' }}>✗</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓ Advanced</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: 'var(--space-md)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Priority Support</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Email</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>WhatsApp</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>24/7 Dedicated</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: 'var(--space-md)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Career Consultant</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--text-muted)' }}>✗</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'var(--accent-lime)' }}>✓ Team</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: 'var(--space-md)' }}>Interview Prep</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', color: 'var(--text-muted)' }}>✗</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', color: 'var(--accent-lime)' }}>✓</td>
+                    <td style={{ padding: 'var(--space-md)', textAlign: 'center', color: 'var(--accent-lime)' }}>✓ Custom</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Security */}
+      <section className="section">
+        <div className="container">
+          <div className="grid grid-2" style={{ alignItems: 'center', gap: 'var(--space-4xl)' }}>
+            <div>
+              <h2 style={{ marginBottom: 'var(--space-lg)' }}>Trusted & Secure</h2>
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: 'var(--space-lg)' }}>
+                Your career data is precious. That's why we've built enterprise-grade security into every plan, 
+                ensuring your personal information remains private and protected while you search for your dream job.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🔒</span>
+                  <span>256-bit SSL encryption for all data</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🛡️</span>
+                  <span>POPI Act compliant data handling</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>💳</span>
+                  <span>PCI DSS secure payment processing</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🔄</span>
+                  <span>Regular security audits and updates</span>
+                </div>
+              </div>
+            </div>
+            <div className="card" style={{ background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1))', textAlign: 'center' }}>
+              <h3 style={{ color: 'var(--primary-cyan)', marginBottom: 'var(--space-md)' }}>30-Day Money-Back Guarantee</h3>
+              <div style={{ fontSize: '4rem', marginBottom: 'var(--space-md)' }}>💰</div>
+              <p style={{ marginBottom: 'var(--space-lg)' }}>
+                Not satisfied with your results? Get a full refund within 30 days, no questions asked. 
+                We're confident you'll love the results, but your peace of mind is our priority.
+              </p>
+              <Link to="/refund" className="btn btn-secondary">View Refund Policy</Link>
+            </div>
           </div>
         </div>
       </section>
