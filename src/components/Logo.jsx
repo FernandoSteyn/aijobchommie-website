@@ -1,17 +1,66 @@
 import React from 'react';
 
-const Logo = ({ size = 50, className = '' }) => {
+const LogoWithAssets = ({ size = 50, className = '' }) => {
+  // This component can use different logo sizes
+  // Using the actual logo files from your Google Drive
+  const logoSizes = {
+    small: '/logos/android-launchericon-48-48.png',
+    medium: '/logos/android-launchericon-72-72.png',
+    medium96: '/logos/android-launchericon-96-96.png',
+    large: '/logos/android-launchericon-144-144.png',
+    xl: '/logos/android-launchericon-192-192.png',
+    xxl: '/logos/android-launchericon-512-512.png'
+  };
+
+  // Select appropriate logo size based on requested size
+  const getLogoPath = (requestedSize) => {
+    if (requestedSize <= 48) return logoSizes.small;
+    if (requestedSize <= 72) return logoSizes.medium;
+    if (requestedSize <= 96) return logoSizes.medium96;
+    if (requestedSize <= 144) return logoSizes.large;
+    if (requestedSize <= 192) return logoSizes.xl;
+    return logoSizes.xxl;
+  };
+
+  const logoPath = getLogoPath(size);
+
   return (
     <div 
       className={`logo ${className}`}
-      style={{ width: size, height: size, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+      style={{ 
+        width: size, 
+        height: size, 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center' 
+      }}
     >
+      <img
+        src={logoPath}
+        alt="AI Job Chommie Logo"
+        width={size}
+        height={size}
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'contain',
+          filter: 'drop-shadow(0 0 10px rgba(0, 255, 255, 0.6))'
+        }}
+        onError={(e) => {
+          // Fallback to SVG logo if PNG fails
+          e.target.style.display = 'none';
+          e.target.nextSibling.style.display = 'block';
+        }}
+      />
+      
+      {/* Fallback SVG Logo */}
       <svg
         width={size}
         height={size}
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        style={{ display: 'none' }}
       >
         {/* Outer circle with gradient */}
         <circle
@@ -68,4 +117,4 @@ const Logo = ({ size = 50, className = '' }) => {
   );
 };
 
-export default Logo;
+export default LogoWithAssets;
