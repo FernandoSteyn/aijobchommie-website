@@ -133,18 +133,18 @@ const AboutPage = () => {
             <div className="card" style={{ background: 'linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(157, 0, 255, 0.1))' }}>
               <h3 style={{ color: 'var(--accent-lime)', marginBottom: 'var(--space-md)' }}>🔬 Our AI Methodology</h3>
               <div style={{ fontSize: '0.9rem', fontFamily: 'var(--font-mono)', background: 'rgba(0, 0, 0, 0.3)', padding: 'var(--space-md)', borderRadius: 'var(--radius-md)', marginBottom: 'var(--space-md)' }}>
-                <div>// Advanced Machine Learning Pipeline</div>
-                <div style={{ color: 'var(--primary-cyan)' }}>const jobMatch = async (candidate, jobs) =&gt; {{</div>
+                <div>{/* Advanced Machine Learning Pipeline */}// Advanced Machine Learning Pipeline</div>
+                <div style={{ color: 'var(--primary-cyan)' }}>const jobMatch = async (candidate, jobs) {'=> {'}</div>
                 <div>&nbsp;&nbsp;const skillsAnalysis = await analyzeSkills(candidate);</div>
                 <div>&nbsp;&nbsp;const culturalFit = await assessCulturalFit(candidate);</div>
                 <div>&nbsp;&nbsp;const careerPath = await predictCareerGrowth(candidate);</div>
                 <div>&nbsp;&nbsp;</div>
-                <div>&nbsp;&nbsp;return findOptimalMatches(jobs, {{</div>
+                <div>&nbsp;&nbsp;return findOptimalMatches(jobs, {'{'}</div>
                 <div>&nbsp;&nbsp;&nbsp;&nbsp;skills: skillsAnalysis,</div>
                 <div>&nbsp;&nbsp;&nbsp;&nbsp;culture: culturalFit,</div>
                 <div>&nbsp;&nbsp;&nbsp;&nbsp;growth: careerPath</div>
-                <div>&nbsp;&nbsp;}});</div>
-                <div style={{ color: 'var(--primary-cyan)' }}>}};</div>
+                <div>&nbsp;&nbsp;{'});'}</div>
+                <div style={{ color: 'var(--primary-cyan)' }}>};</div>
               </div>
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
                 Our proprietary algorithms combine natural language processing, behavioral analysis, 
