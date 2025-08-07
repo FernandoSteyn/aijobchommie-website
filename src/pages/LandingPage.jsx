@@ -52,27 +52,27 @@ const LandingPage = () => {
           </h2>
           <div className="grid grid-3">
             <div className="card fade-in">
-              <h3>🤖 AI-Powered Matching</h3>
+              <h3>AI-Powered Matching</h3>
               <p>Advanced algorithms match you with the perfect job opportunities based on your skills and preferences.</p>
             </div>
             <div className="card fade-in">
-              <h3>💰 Affordable Pricing</h3>
+              <h3>Affordable Pricing</h3>
               <p>Basic plan at R8/month, Premium at R17/month. Both include a 3-day free trial - no credit card required!</p>
             </div>
             <div className="card fade-in">
-              <h3>🇿🇦 Built for South Africa</h3>
+              <h3>Built for South Africa</h3>
               <p>Designed specifically for the South African job market with local insights and connections.</p>
             </div>
             <div className="card fade-in">
-              <h3>📝 Smart Applications</h3>
+              <h3>Smart Applications</h3>
               <p>Auto-generate cover letters and optimize your applications with AI assistance.</p>
             </div>
             <div className="card fade-in">
-              <h3>⚡ Fast & Efficient</h3>
+              <h3>Fast & Efficient</h3>
               <p>Save time with automated job searching and application processes.</p>
             </div>
             <div className="card fade-in">
-              <h3>📈 Career Growth</h3>
+              <h3>Career Growth</h3>
               <p>Get insights and recommendations to advance your career and increase earning potential.</p>
             </div>
           </div>
@@ -168,7 +168,10 @@ const LandingPage = () => {
         <div className="container">
           <Logo size={40} />
           <p style={{ margin: '20px 0' }}>
-            © 2024 AI Job Chommie. Made with ❤️ in South Africa.
+            © 2025 AI Job Chommie. All rights reserved.
+          </p>
+          <p style={{ margin: '20px 0', fontSize: '0.9rem', opacity: '0.8' }}>
+            Made from the heart for all South African job seekers by yours truly, with love, Fernando Steyn
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
             <Link to="/about" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>About</Link>
