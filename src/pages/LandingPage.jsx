@@ -5,6 +5,7 @@ import Logo from '../components/Logo';
 import AnnouncementBanner from '../components/AnnouncementBanner';
 import ParticleSystem from '../components/ParticleSystem';
 import GeometricBackground from '../components/GeometricBackground';
+import EnhancedHeroSection from '../components/EnhancedHeroSection';
 
 const LandingPage = () => {
   return (
@@ -26,29 +27,8 @@ const LandingPage = () => {
       <Navigation />
       <AnnouncementBanner />
       
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="bg-pattern"></div>
-        <div className="container">
-          <div className="fade-in">
-            <Logo size={120} className="glow" />
-            <h1 style={{ marginTop: '30px', marginBottom: '20px' }}>
-              AI Job Chommie
-            </h1>
-            <p style={{ fontSize: '1.5rem', marginBottom: '40px', color: 'var(--text-secondary)' }}>
-              Your intelligent job search companion for South Africa
-            </p>
-            <div>
-              <Link to="/pricing" className="btn btn-primary">
-                Get Started
-              </Link>
-              <Link to="/about" className="btn btn-secondary">
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Enhanced Hero Section with all requested features */}
+      <EnhancedHeroSection />
 
       {/* Features Section */}
       <section className="section">

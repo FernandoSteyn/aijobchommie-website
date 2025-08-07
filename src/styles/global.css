@@ -1,6 +1,7 @@
 /* 🔥 AI JOB CHOMMIE - GOD-TIER 3D NEON CYBERPUNK EXPERIENCE 🔥 */
 /* ⚡ SOUTH AFRICAN PRIDE - WORLD-CLASS PROGRAMMING ⚡ */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@100;300;400;500;700;900&family=Rajdhani:wght@200;300;400;500;600;700&family=Share+Tech+Mono:wght@400&display=swap');
+@import './enhancedHero.css';
 
 :root {
   /* PROFESSIONAL DESIGN TOKEN SYSTEM */
@@ -12,6 +13,21 @@
   --accent-lime: #00ff41;
   --accent-violet: #9d00ff;
   --accent-amber: #ff6b00;
+  
+  /* Neon Color Aliases for compatibility */
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-blue: #0099ff;
+  --neon-green: #00ff41;
+  --neon-purple: #9d00ff;
+  --neon-orange: #ff6b00;
+  
+  /* Background Aliases */
+  --bg-void: #000000;
+  
+  /* Text Aliases */
+  --text-chrome: #e0f2fe;
+  --text-glow: #ffffff;
   
   /* Semantic Color System */
   --color-success: #00ff41;
