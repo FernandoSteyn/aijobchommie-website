@@ -87,13 +87,13 @@ const AboutPage = () => {
           <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-4xl)' }}>Why Choose AI Job Chommie?</h2>
           <div className="grid grid-3">
             <div className="card hover-card">
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>🤖</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>🧠</div>
               <h3 style={{ color: 'var(--primary-cyan)' }}>Advanced AI Matching</h3>
               <p>Our proprietary AI algorithms analyze thousands of data points to find your perfect job match, 
               going beyond simple keyword matching to understand your career aspirations, skills, and cultural fit.</p>
             </div>
             <div className="card hover-card">
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>💰</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>💎</div>
               <h3 style={{ color: 'var(--primary-magenta)' }}>Unbeatable Affordability</h3>
               <p>Starting at just R8/month with a 3-day free trial, we're 50x more affordable than traditional recruitment agencies while 
               providing superior AI-powered matching and career support services.</p>
@@ -111,7 +111,7 @@ const AboutPage = () => {
               skills, potential, and job fit rather than networks or backgrounds.</p>
             </div>
             <div className="card hover-card">
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>📱</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>📲</div>
               <h3 style={{ color: 'var(--accent-amber)' }}>Mobile-First Design</h3>
               <p>Apply to jobs from anywhere with our PWA app. Works perfectly on any device, even with 
               limited data or slow internet connections.</p>
@@ -131,7 +131,7 @@ const AboutPage = () => {
         <div className="container">
           <div className="grid grid-2" style={{ alignItems: 'center', gap: 'var(--space-4xl)' }}>
             <div className="card" style={{ background: 'linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(157, 0, 255, 0.1))' }}>
-              <h3 style={{ color: 'var(--accent-lime)', marginBottom: 'var(--space-md)' }}>🔬 Our AI Methodology</h3>
+              <h3 style={{ color: 'var(--accent-lime)', marginBottom: 'var(--space-md)' }}>⚡ Our AI Methodology</h3>
               <div style={{ fontSize: '0.9rem', fontFamily: 'var(--font-mono)', background: 'rgba(0, 0, 0, 0.3)', padding: 'var(--space-md)', borderRadius: 'var(--radius-md)', marginBottom: 'var(--space-md)' }}>
                 <div>{/* Advanced Machine Learning Pipeline */}// Advanced Machine Learning Pipeline</div>
                 <div style={{ color: 'var(--primary-cyan)' }}>const jobMatch = async (candidate, jobs) {'=> {'}</div>
@@ -181,7 +181,7 @@ const AboutPage = () => {
           <div className="grid grid-2">
             <div className="card hover-card" style={{ border: '2px solid var(--primary-cyan)' }}>
               <h3 style={{ color: 'var(--primary-cyan)', display: 'flex', alignItems: 'center', marginBottom: 'var(--space-md)' }}>
-                <span style={{ marginRight: 'var(--space-sm)' }}>🤝</span> Ubuntu - Humanity
+                <span style={{ marginRight: 'var(--space-sm)' }}>🌟</span> Ubuntu - Humanity
               </h3>
               <p>We believe in the African philosophy of Ubuntu - "I am because we are." Your success is our success, 
               and we're committed to lifting up every South African job seeker regardless of their background.</p>
@@ -195,14 +195,14 @@ const AboutPage = () => {
             </div>
             <div className="card hover-card" style={{ border: '2px solid var(--accent-lime)' }}>
               <h3 style={{ color: 'var(--accent-lime)', display: 'flex', alignItems: 'center', marginBottom: 'var(--space-md)' }}>
-                <span style={{ marginRight: 'var(--space-sm)' }}>🔬</span> Innovation Excellence
+                <span style={{ marginRight: 'var(--space-sm)' }}>🚀</span> Innovation Excellence
               </h3>
               <p>We're constantly pushing the boundaries of what's possible with AI and job matching. Our team 
               never stops learning, improving, and innovating for better user experiences.</p>
             </div>
             <div className="card hover-card" style={{ border: '2px solid var(--accent-violet)' }}>
               <h3 style={{ color: 'var(--accent-violet)', display: 'flex', alignItems: 'center', marginBottom: 'var(--space-md)' }}>
-                <span style={{ marginRight: 'var(--space-sm)' }}>💎</span> Transparency & Trust
+                <span style={{ marginRight: 'var(--space-sm)' }}>🔒</span> Transparency & Trust
               </h3>
               <p>No hidden fees, no false promises, no black-box algorithms. We're open about our processes, 
               pricing, and how our AI makes decisions about your career.</p>
