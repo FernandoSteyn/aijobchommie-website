@@ -923,7 +923,110 @@ h1::before {
   75% { background-position: 50% 100%; }
 }
 
-/* ⚡ TIA.ORG.ZA PARTNERSHIP READY */
+/* Advanced Micro-Interactions */
+.card {
+  cursor: pointer;
+  user-select: none;
+  will-change: transform, box-shadow;
+}
+
+.card:active {
+  transform: translateY(-15px) rotateX(8deg) rotateY(3deg) translateZ(40px) scale(0.98);
+  transition: transform 0.1s ease-out;
+}
+
+.btn {
+  cursor: pointer;
+  user-select: none;
+  will-change: transform, box-shadow;
+  transform-origin: center;
+}
+
+.btn:active {
+  transform: translateY(-3px) scale(0.95);
+  transition: transform 0.1s ease-out;
+}
+
+/* Text Selection Styling */
+::selection {
+  background: var(--primary-cyan);
+  color: var(--bg-primary);
+  text-shadow: none;
+}
+
+/* Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid var(--primary-cyan);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary-cyan);
+  outline-offset: 4px;
+}
+
+/* Mobile Touch Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .card:hover {
+    transform: none;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  .mobile-menu a {
+    padding: 20px 25px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance Optimizations */
+.spotlight-container,
+.matrix-rain,
+.bg-pattern {
+  will-change: transform, opacity;
+  contain: layout style paint;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-cyan: #ffffff;
+    --primary-magenta: #ffffff;
+    --text-primary: #ffffff;
+    --bg-primary: #000000;
+  }
+  
+  .card {
+    border: 2px solid #ffffff;
+  }
+  
+  .btn {
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Partnership Ready Styling */
 .partnership-ready {
   position: relative;
   background: linear-gradient(

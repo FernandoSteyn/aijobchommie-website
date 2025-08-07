@@ -3,18 +3,24 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 import AnnouncementBanner from '../components/AnnouncementBanner';
+import ParticleSystem from '../components/ParticleSystem';
+import GeometricBackground from '../components/GeometricBackground';
 
 const LandingPage = () => {
   return (
     <div>
-      {/* 💫 GOD-TIER SPOTLIGHT SYSTEM */}
+      {/* Advanced Interactive Background System */}
+      <GeometricBackground />
+      <ParticleSystem />
+      
+      {/* Cinematic Lighting System */}
       <div className="spotlight-container">
         <div className="main-spotlight" style={{ left: '50%', top: '50%' }}></div>
         <div className="secondary-spotlight" style={{ left: '20%', top: '30%' }}></div>
         <div className="secondary-spotlight" style={{ left: '80%', top: '70%', animationDelay: '-5s' }}></div>
       </div>
       
-      {/* 🎯 MATRIX DIGITAL RAIN */}
+      {/* Digital Rain Effect */}
       <div className="matrix-rain"></div>
       
       <Navigation />
