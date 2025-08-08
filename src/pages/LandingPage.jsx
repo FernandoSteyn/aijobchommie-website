@@ -6,6 +6,7 @@ import AnnouncementBanner from '../components/AnnouncementBanner';
 import ParticleSystem from '../components/ParticleSystem';
 import GeometricBackground from '../components/GeometricBackground';
 import EnhancedHeroSection from '../components/EnhancedHeroSection';
+import DualCTASection from '../components/DualCTASection';
 
 const LandingPage = () => {
   return (
@@ -28,7 +29,8 @@ const LandingPage = () => {
       <AnnouncementBanner />
       
       {/* Enhanced Hero Section with all requested features */}
-      <EnhancedHeroSection />
+<EnhancedHeroSection />
+      <DualCTASection showInvestorMetrics={true} />
 
       {/* Dynamic Marketing Banners */}
       <section className="section" style={{ paddingTop: '40px' }}>
