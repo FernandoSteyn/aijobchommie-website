@@ -1072,3 +1072,279 @@ html {
       0 0 150px rgba(0, 255, 65, 0.4);
   }
 }
+
+/* 🚨 CRITICAL MOBILE FIXES - PREVENT CARD OVERLAPS */
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 767px) {
+  /* Disable performance-heavy effects on mobile */
+  .spotlight-container,
+  .matrix-rain,
+  .bg-pattern {
+    display: none !important;
+  }
+  
+  /* Fix body scrolling issues */
+  body {
+    overflow-x: hidden !important;
+    background-attachment: scroll; /* Fix iOS background attachment */
+  }
+  
+  /* Container improvements */
+  .container {
+    padding: 0 15px !important;
+    max-width: 100% !important;
+  }
+  
+  /* Card system fixes - prevent overlaps */
+  .card {
+    margin: 15px 0 !important;
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transform: none !important; /* Disable 3D transforms on mobile */
+    transition: box-shadow 0.3s ease !important;
+  }
+  
+  .card:hover {
+    transform: none !important;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3) !important;
+  }
+  
+  /* Grid system mobile fixes */
+  .grid {
+    display: block !important; /* Force single column on mobile */
+    gap: 20px !important;
+  }
+  
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Button improvements for mobile */
+  .btn {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 18px 20px !important;
+    font-size: 16px !important; /* Prevent iOS zoom */
+    transform: none !important;
+    border-radius: 12px !important;
+  }
+  
+  .btn:hover {
+    transform: none !important;
+  }
+  
+  .btn:active {
+    transform: scale(0.98) !important;
+    transition: transform 0.1s ease !important;
+  }
+  
+  /* Typography adjustments */
+  h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  h2 {
+    font-size: clamp(1.4rem, 6vw, 2rem) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 15px !important;
+  }
+  
+  h3 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Section spacing */
+  .section {
+    padding: 40px 0 !important;
+  }
+  
+  .hero {
+    min-height: 80vh !important;
+    padding: 80px 0 40px !important;
+  }
+  
+  /* Navigation mobile fixes */
+  .nav {
+    padding: 12px 0 !important;
+  }
+  
+  .mobile-menu {
+    width: 85% !important;
+    max-width: 300px !important;
+    top: 70px !important;
+  }
+  
+  /* Form improvements */
+  input, textarea, select {
+    width: 100% !important;
+    font-size: 16px !important; /* Prevent iOS zoom */
+    padding: 15px !important;
+    border-radius: 10px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Table responsiveness */
+  table {
+    width: 100% !important;
+    font-size: 14px !important;
+    display: block !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+  
+  th, td {
+    padding: 8px 4px !important;
+    min-width: 80px !important;
+  }
+  
+  /* Pricing page specific fixes */
+  .pricing-card {
+    margin-bottom: 25px !important;
+    width: 100% !important;
+  }
+  
+  /* Stats section improvements */
+  .stat-number {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+  }
+  
+  .stat-label {
+    font-size: 14px !important;
+  }
+  
+  /* Better spacing for mobile cards */
+  .card + .card {
+    margin-top: 25px !important;
+  }
+  
+  /* iframe improvements */
+  iframe {
+    width: 100% !important;
+    height: 250px !important;
+    border-radius: 10px !important;
+  }
+  
+  /* Fix mobile menu positioning */
+  .mobile-menu ul {
+    padding-top: 20px !important;
+  }
+  
+  .mobile-menu li {
+    margin: 5px 15px !important;
+  }
+  
+  .mobile-menu a {
+    padding: 15px 20px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Tablet specific improvements */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .card {
+    padding: 25px !important;
+  }
+  
+  .btn {
+    width: auto !important;
+    min-width: 150px !important;
+  }
+}
+
+/* Landscape phone fixes */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    min-height: 60vh !important;
+    padding: 60px 0 30px !important;
+  }
+  
+  .section {
+    padding: 30px 0 !important;
+  }
+}
+
+/* Very small screens (< 375px) */
+@media (max-width: 374px) {
+  .container {
+    padding: 0 10px !important;
+  }
+  
+  .card {
+    padding: 15px !important;
+    margin: 10px 0 !important;
+  }
+  
+  .btn {
+    padding: 15px !important;
+    font-size: 14px !important;
+  }
+  
+  h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  p {
+    font-size: 14px !important;
+  }
+}
+
+/* Loading states and animations for mobile */
+@media (max-width: 767px) {
+  .btn-loading {
+    pointer-events: none !important;
+    opacity: 0.7 !important;
+  }
+  
+  .fade-in {
+    animation: simpleFadeIn 0.5s ease-out forwards !important;
+  }
+  
+  @keyframes simpleFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Fix mobile touch targets */
+@media (pointer: coarse) {
+  .btn, .mobile-menu a, .nav-links a {
+    min-height: 44px !important; /* iOS recommended touch target */
+    min-width: 44px !important;
+  }
+  
+  .hamburger {
+    width: 30px !important;
+    height: 24px !important;
+  }
+  
+  .mobile-menu-btn {
+    padding: 15px !important;
+  }
+}

@@ -416,9 +416,15 @@ const ContactPage = () => {
                   We welcome scheduled visits from clients, partners, and job seekers. 
                   Please contact us in advance to arrange a meeting.
                 </p>
-                <button className="btn btn-secondary" style={{ width: '100%' }}>
+                <Link to="https://calendly.com/aijobchommie/30min" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ 
+                  width: '100%',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textDecoration: 'none'
+                }}>
                   📅 Schedule a Meeting
-                </button>
+                </Link>
               </div>
             </div>
 

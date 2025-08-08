@@ -40,7 +40,7 @@ const PricingPage = () => {
                 <div className="stat-label">Day Free Trial</div>
               </div>
               <div className="fade-in" style={{ animationDelay: '0.4s' }}>
-                <div className="stat-number" style={{ color: 'var(--primary-magenta)' }}>30</div>
+                <div className="stat-number" style={{ color: 'var(--primary-magenta)' }}>7</div>
                 <div className="stat-label">Day Money-Back</div>
               </div>
             </div>
@@ -113,7 +113,7 @@ const PricingPage = () => {
               <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--neon-pink)', marginBottom: '10px' }}>
                 R17<span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>/month</span>
               </div>
-              <p style={{ marginBottom: '20px', color: 'var(--neon-green)', fontWeight: 'bold' }}>✨ 3-Day Free Trial</p>
+              <p style={{ marginBottom: '20px', color: 'var(--neon-green)', fontWeight: 'bold' }}>✨ 7-Day Money-Back Guarantee</p>
               <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>For serious career advancement</p>
               
               <ul style={{ textAlign: 'left', marginBottom: '30px', listStyle: 'none' }}>
@@ -129,32 +129,32 @@ const PricingPage = () => {
                 <li style={{ marginBottom: '10px' }}>✅ Resume builder & templates</li>
               </ul>
               
-              <Link to="#" className="btn btn-primary" style={{ width: '100%', background: 'linear-gradient(45deg, var(--neon-pink), var(--neon-blue))', marginBottom: '10px' }}>Start 3-Day Trial</Link>
+              <Link to="#" className="btn btn-primary" style={{ width: '100%', background: 'linear-gradient(45deg, var(--neon-pink), var(--neon-blue))', marginBottom: '10px' }}>Start Your Journey</Link>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>No credit card required</p>
             </div>
 
-            {/* Enterprise Plan */}
-            <div className="card" style={{ textAlign: 'center', position: 'relative', border: '2px solid var(--neon-green)', gridColumn: 'span 2' }}>
+            {/* Enterprise Plan - Under Construction */}
+            <div className="card" style={{ textAlign: 'center', position: 'relative', border: '2px solid var(--neon-orange)', gridColumn: 'span 2', opacity: '0.8' }}>
               <div style={{ 
                 position: 'absolute', 
                 top: '-10px', 
                 left: '50%', 
                 transform: 'translateX(-50%)', 
-                background: 'var(--neon-green)', 
+                background: 'var(--neon-orange)', 
                 color: 'var(--bg-primary)', 
                 padding: '5px 15px', 
                 borderRadius: '15px', 
                 fontSize: '0.8rem', 
                 fontWeight: 'bold' 
               }}>
-                FOR BUSINESSES
+                UNDER CONSTRUCTION
               </div>
-              <h3 style={{ marginBottom: '20px', color: 'var(--neon-green)' }}>Enterprise Plan</h3>
-              <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--neon-green)', marginBottom: '10px' }}>
-                Custom<span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}> pricing</span>
+              <h3 style={{ marginBottom: '20px', color: 'var(--neon-orange)' }}>Enterprise Plan</h3>
+              <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--neon-orange)', marginBottom: '10px' }}>
+                Coming<span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}> Soon</span>
               </div>
-              <p style={{ marginBottom: '20px', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>🚀 Custom Demo Available</p>
-              <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>For companies hiring at scale</p>
+              <p style={{ marginBottom: '20px', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>🚧 Currently in Development</p>
+              <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>Advanced features for enterprises will be available soon</p>
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-lg)', textAlign: 'left' }}>
                 <ul style={{ listStyle: 'none' }}>
@@ -174,8 +174,15 @@ const PricingPage = () => {
               </div>
               
               <div style={{ marginTop: 'var(--space-lg)' }}>
-                <Link to="#" className="btn btn-primary" style={{ background: 'linear-gradient(45deg, var(--neon-green), var(--neon-cyan))', marginRight: 'var(--space-md)' }}>Request Demo</Link>
-                <Link to="#" className="btn btn-secondary" style={{ color: 'var(--neon-green)', borderColor: 'var(--neon-green)' }}>Contact Sales</Link>
+                <button disabled className="btn btn-secondary" style={{ 
+                  background: 'rgba(255, 107, 0, 0.2)', 
+                  color: 'var(--neon-orange)', 
+                  borderColor: 'var(--neon-orange)', 
+                  opacity: '0.7',
+                  cursor: 'not-allowed',
+                  marginRight: 'var(--space-md)' 
+                }}>Coming Soon</button>
+                <Link to="/contact" className="btn btn-secondary" style={{ color: 'var(--neon-orange)', borderColor: 'var(--neon-orange)' }}>Get Notified</Link>
               </div>
             </div>
             
@@ -315,10 +322,10 @@ const PricingPage = () => {
               </div>
             </div>
             <div className="card" style={{ background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1))', textAlign: 'center' }}>
-              <h3 style={{ color: 'var(--primary-cyan)', marginBottom: 'var(--space-md)' }}>30-Day Money-Back Guarantee</h3>
+              <h3 style={{ color: 'var(--primary-cyan)', marginBottom: 'var(--space-md)' }}>7-Day Money-Back Guarantee</h3>
               <div style={{ fontSize: '4rem', marginBottom: 'var(--space-md)' }}>💰</div>
               <p style={{ marginBottom: 'var(--space-lg)' }}>
-                Not satisfied with your results? Get a full refund within 30 days, no questions asked. 
+                Not satisfied with your results? Get a full refund within 7 days, no questions asked. 
                 We're confident you'll love the results, but your peace of mind is our priority.
               </p>
               <Link to="/refund" className="btn btn-secondary">View Refund Policy</Link>
@@ -338,7 +345,7 @@ const PricingPage = () => {
             </div>
             <div className="card">
               <h3>Do you offer refunds?</h3>
-              <p>We offer a 30-day money-back guarantee. Check our <Link to="/refund" style={{ color: 'var(--neon-cyan)' }}>refund policy</Link> for details.</p>
+              <p>We offer a 7-day money-back guarantee. Check our <Link to="/refund" style={{ color: 'var(--neon-cyan)' }}>refund policy</Link> for details.</p>
             </div>
             <div className="card">
               <h3>How does payment work?</h3>

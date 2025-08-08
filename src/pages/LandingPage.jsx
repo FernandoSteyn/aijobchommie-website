@@ -30,6 +30,18 @@ const LandingPage = () => {
       {/* Enhanced Hero Section with all requested features */}
       <EnhancedHeroSection />
 
+      {/* Dynamic Marketing Banners */}
+      <section className="section" style={{ paddingTop: '40px' }}>
+        <div className="container">
+          <div className="marketing-banner fade-in" style={{ animationDelay: '0.2s' }}>
+            <h3 style={{ color: 'var(--neon-cyan)' }}>"The Last CV You'll Ever Make"</h3>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
+              Stop rewriting your CV for every job. Our AI creates perfectly tailored applications for each opportunity.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="section">
         <div className="container">
@@ -65,6 +77,21 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Marketing Banner 2 */}
+      <section className="section" style={{ paddingBottom: '40px' }}>
+        <div className="container">
+          <div className="marketing-banner fade-in" style={{ 
+            background: 'linear-gradient(135deg, rgba(255, 0, 255, 0.15), rgba(0, 255, 65, 0.15))',
+            borderColor: 'var(--neon-pink)'
+          }}>
+            <h3 style={{ color: 'var(--neon-pink)' }}>"No More Commuting for Job Searches"</h3>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
+              Apply to hundreds of jobs from your couch. AI Job Chommie brings the job market to you.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
@@ -84,6 +111,21 @@ const LandingPage = () => {
               <h1 style={{ color: 'var(--neon-green)', marginBottom: '10px' }}>95%</h1>
               <p>Success Rate</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Marketing Banner 3 */}
+      <section className="section" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+        <div className="container">
+          <div className="marketing-banner fade-in" style={{ 
+            background: 'linear-gradient(135deg, rgba(0, 255, 65, 0.15), rgba(255, 107, 0, 0.15))',
+            borderColor: 'var(--neon-green)'
+          }}>
+            <h3 style={{ color: 'var(--neon-green)' }}>"AI Job Chommie: Your Personal Career Assistant"</h3>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
+              Like having a career coach, recruiter, and personal assistant all working for you 24/7.
+            </p>
           </div>
         </div>
       </section>
@@ -143,6 +185,21 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Marketing Banner 4 */}
+      <section className="section" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+        <div className="container">
+          <div className="marketing-banner fade-in" style={{ 
+            background: 'linear-gradient(135deg, rgba(157, 0, 255, 0.15), rgba(0, 255, 255, 0.15))',
+            borderColor: 'var(--neon-purple)'
+          }}>
+            <h3 style={{ color: 'var(--neon-purple)' }}>"Relax While AI Job Chommie Works for You"</h3>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
+              Set it and forget it. Our AI never sleeps, constantly finding and applying to your perfect job matches.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section" style={{ textAlign: 'center', background: 'var(--bg-secondary)' }}>
         <div className="container">
@@ -151,7 +208,7 @@ const LandingPage = () => {
             Join thousands of South Africans who have transformed their careers with AI Job Chommie
           </p>
           <Link to="/pricing" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '20px 40px' }}>
-            Start Your Journey Today
+            Start Your Journey
           </Link>
         </div>
       </section>

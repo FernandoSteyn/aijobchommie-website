@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -12,6 +13,20 @@ const Navigation = () => {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+  const isActive = (path) => {
+    if (path === '/' && location.pathname === '/') return true;
+    if (path !== '/' && location.pathname.startsWith(path)) return true;
+    return false;
+  };
+
+  const getLinkStyle = (path) => ({
+    position: 'relative',
+    color: isActive(path) ? 'var(--primary-cyan)' : 'inherit',
+    fontWeight: isActive(path) ? '600' : 'normal',
+    textShadow: isActive(path) ? '0 0 10px var(--primary-cyan)' : 'none',
+    transition: 'all 0.3s ease'
+  });
 
   return (
     <>
@@ -24,12 +39,12 @@ const Navigation = () => {
             
             {/* Desktop Navigation */}
             <ul className="nav-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/pricing">Pricing</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/terms">Terms</Link></li>
-              <li><Link to="/privacy">Privacy</Link></li>
+              <li><Link to="/" style={getLinkStyle('/')}>Home</Link></li>
+              <li><Link to="/about" style={getLinkStyle('/about')}>About</Link></li>
+              <li><Link to="/pricing" style={getLinkStyle('/pricing')}>Pricing</Link></li>
+              <li><Link to="/contact" style={getLinkStyle('/contact')}>Contact</Link></li>
+              <li><Link to="/terms" style={getLinkStyle('/terms')}>Terms</Link></li>
+              <li><Link to="/privacy" style={getLinkStyle('/privacy')}>Privacy</Link></li>
             </ul>
             
             {/* Mobile Menu Button */}
@@ -51,12 +66,12 @@ const Navigation = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
         <ul>
-          <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
-          <li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
-          <li><Link to="/pricing" onClick={closeMobileMenu}>Pricing</Link></li>
-          <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
-          <li><Link to="/terms" onClick={closeMobileMenu}>Terms</Link></li>
-          <li><Link to="/privacy" onClick={closeMobileMenu}>Privacy</Link></li>
+          <li><Link to="/" onClick={closeMobileMenu} style={getLinkStyle('/')}>Home</Link></li>
+          <li><Link to="/about" onClick={closeMobileMenu} style={getLinkStyle('/about')}>About</Link></li>
+          <li><Link to="/pricing" onClick={closeMobileMenu} style={getLinkStyle('/pricing')}>Pricing</Link></li>
+          <li><Link to="/contact" onClick={closeMobileMenu} style={getLinkStyle('/contact')}>Contact</Link></li>
+          <li><Link to="/terms" onClick={closeMobileMenu} style={getLinkStyle('/terms')}>Terms</Link></li>
+          <li><Link to="/privacy" onClick={closeMobileMenu} style={getLinkStyle('/privacy')}>Privacy</Link></li>
         </ul>
       </div>
       

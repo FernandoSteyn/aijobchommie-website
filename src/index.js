@@ -1,6 +1,6 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { useState, Suspense, lazy, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './styles/global.css';
 import LoadingScreen from './components/LoadingScreen';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -40,6 +40,17 @@ const PageLoadingFallback = () => (
   </div>
 );
 
+// Component to handle scroll-to-top on route change
+const ScrollToTop = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+  
+  return null;
+};
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -52,6 +63,7 @@ const App = () => {
       {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
       {!isLoading && (
         <Router>
+          <ScrollToTop />
           <ErrorBoundary>
             <Suspense fallback={<PageLoadingFallback />}>
               <Routes>
