@@ -1,10 +1,11 @@
-/* 🚀 DUAL CTA STRATEGY - IMMEDIATE PRIORITY 🚀 */
+/* DUAL CTA STRATEGY - IMMEDIATE PRIORITY */
 /* PRIMARY: Install PWA (60% higher install rate) */
 /* SECONDARY: Start Free Trial (25% increase in trial signups) */
 /* INVESTOR APPEAL: Clear conversion funnels */
 
 import React, { useState, useEffect } from 'react';
 import PWAInstallHandler from './PWAInstallHandler';
+import NeonEmoji from './NeonEmoji';
 
 const DualCTASection = ({ showInvestorMetrics = false, position = 'hero' }) => {
   const [isInstallable, setIsInstallable] = useState(false);
@@ -123,7 +124,7 @@ const DualCTASection = ({ showInvestorMetrics = false, position = 'hero' }) => {
               className="cta-button primary"
               aria-label="Start your free trial"
             >
-              <span className="cta-icon">🚀</span>
+            <NeonEmoji type="lightning" size={24} color="lime" intensity="high" className="cta-icon" />
               <div className="cta-content">
                 <div className="cta-title">Start Free Trial</div>
                 <div className="cta-subtitle">3 days • No credit card</div>
@@ -139,7 +140,7 @@ const DualCTASection = ({ showInvestorMetrics = false, position = 'hero' }) => {
             className="cta-button secondary"
             aria-label="Start your free trial - no credit card required"
           >
-            <span className="cta-icon">⚡</span>
+            <NeonEmoji type="free" size={24} color="cyan" intensity="medium" className="cta-icon" />
             <div className="cta-content">
               <div className="cta-title">Start Free Trial</div>
               <div className="cta-subtitle">No credit card required</div>
@@ -154,7 +155,7 @@ const DualCTASection = ({ showInvestorMetrics = false, position = 'hero' }) => {
             className="cta-button tertiary"
             aria-label="Learn more about AI Job Chommie features"
           >
-            <span className="cta-icon">📖</span>
+            <NeonEmoji type="briefcase" size={24} color="magenta" intensity="medium" className="cta-icon" />
             <div className="cta-content">
               <div className="cta-title">Learn More</div>
               <div className="cta-subtitle">Features & Benefits</div>
@@ -167,7 +168,7 @@ const DualCTASection = ({ showInvestorMetrics = false, position = 'hero' }) => {
       {showUrgency && (
         <div className="urgency-indicator">
           <div className="urgency-content">
-            <span className="urgency-icon">⏰</span>
+          <NeonEmoji type="timer" size={20} color="orange" intensity="high" className="urgency-icon" />
             <span className="urgency-text">
               Limited time: Extended 3-day free trial for new users!
             </span>
@@ -178,19 +179,19 @@ const DualCTASection = ({ showInvestorMetrics = false, position = 'hero' }) => {
       {/* TRUST INDICATORS */}
       <div className="trust-indicators">
         <div className="trust-item">
-          <span className="trust-icon">🔒</span>
+          <NeonEmoji type="shield" size={16} color="cyan" intensity="medium" className="trust-icon" />
           <span className="trust-text">Secure & Private</span>
         </div>
         <div className="trust-item">
-          <span className="trust-icon">🇿🇦</span>
+          <span className="trust-icon">SA</span>
           <span className="trust-text">Made in South Africa</span>
         </div>
         <div className="trust-item">
-          <span className="trust-icon">⚡</span>
+          <NeonEmoji type="lightning" size={16} color="lime" intensity="medium" className="trust-icon" />
           <span className="trust-text">Instant Setup</span>
         </div>
         <div className="trust-item">
-          <span className="trust-icon">❌</span>
+          <span className="trust-icon">✗</span>
           <span className="trust-text">No Credit Card</span>
         </div>
       </div>

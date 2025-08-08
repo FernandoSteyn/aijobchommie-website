@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
+import NeonEmoji from './NeonEmoji';
 
 const EnhancedHeroSection = () => {
   const [currentCodeIndex, setCurrentCodeIndex] = useState(0);
@@ -66,19 +67,19 @@ const EnhancedHeroSection = () => {
 
   // Timeline steps
   const timelineSteps = [
-    { name: 'Planning', icon: '📋', progress: 100, color: '#00ff41' },
-    { name: 'Design', icon: '🎨', progress: 100, color: '#00ffff' },
-    { name: 'AI Integration', icon: '🤖', progress: 85, color: '#ff00ff' },
-    { name: 'Testing', icon: '🧪', progress: 70, color: '#ff6b00' },
-    { name: 'Launch Aug 30', icon: '🚀', progress: 45, color: '#9d00ff' }
+    { name: 'Planning', icon: 'briefcase', progress: 100, color: '#00ff41' },
+    { name: 'Design', icon: 'diamond', progress: 100, color: '#00ffff' },
+    { name: 'AI Integration', icon: 'brain', progress: 85, color: '#ff00ff' },
+    { name: 'Testing', icon: 'gear', progress: 70, color: '#ff6b00' },
+    { name: 'Launch Aug 30', icon: 'rocket', progress: 45, color: '#9d00ff' }
   ];
 
   // Tech stack icons with animated connections
   const techStack = [
-    { name: 'React', icon: '⚛️', color: '#61dafb' },
-    { name: 'AI/ML', icon: '🧠', color: '#ff6b6b' },
-    { name: 'PWA', icon: '📱', color: '#5f27cd' },
-    { name: 'Node.js', icon: '🟢', color: '#68d391' }
+    { name: 'React', icon: 'settings', color: '#61dafb' },
+    { name: 'AI/ML', icon: 'brain', color: '#ff6b6b' },
+    { name: 'PWA', icon: 'mobile', color: '#5f27cd' },
+    { name: 'Node.js', icon: 'gear', color: '#68d391' }
   ];
 
   // Live code typing effect
@@ -181,7 +182,7 @@ const EnhancedHeroSection = () => {
 
           {/* Countdown Timer */}
           <div className="countdown-container">
-            <h3>🚀 Full Launch Countdown</h3>
+            <h3><NeonEmoji type="rocket" size={24} color="magenta" intensity="high" /> Full Launch Countdown</h3>
             <div className="countdown-grid">
               <div className="countdown-item">
                 <span className="countdown-number">{countdown.days}</span>
@@ -205,7 +206,7 @@ const EnhancedHeroSection = () => {
           {/* CTA Buttons */}
           <div className="hero-buttons">
             <Link to="/pricing" className="btn btn-primary pulse">
-              🆓 Start Free Trial
+              <NeonEmoji type="free" size={20} color="lime" intensity="high" /> Start Free Trial
             </Link>
             <Link to="/about" className="btn btn-secondary">
               Learn More
@@ -214,7 +215,7 @@ const EnhancedHeroSection = () => {
 
           {/* Built for South Africans Badge */}
           <div className="sa-badge">
-            <span className="flag-icon">🇿🇦</span>
+            <NeonEmoji type="sa-flag" size={24} color="multi" intensity="medium" className="flag-icon" />
             <span>Built for South Africans</span>
           </div>
         </div>
@@ -248,7 +249,7 @@ const EnhancedHeroSection = () => {
 
       {/* Interactive Development Timeline */}
       <div className="development-timeline">
-        <h3>🛠️ Development Progress</h3>
+        <h3><NeonEmoji type="gear" size={24} color="orange" intensity="high" /> Development Progress</h3>
         <div className="timeline-container">
           <div className="timeline-progress" style={{ width: `${timelineProgress}%` }}></div>
           {timelineSteps.map((step, index) => (
@@ -257,7 +258,9 @@ const EnhancedHeroSection = () => {
               className={`timeline-step ${index === activeStep ? 'active' : ''} ${step.progress === 100 ? 'completed' : ''}`}
               style={{ '--step-color': step.color }}
             >
-              <div className="step-icon">{step.icon}</div>
+              <div className="step-icon">
+                <NeonEmoji type={step.icon} size={20} color="cyan" intensity="medium" />
+              </div>
               <div className="step-content">
                 <span className="step-name">{step.name}</span>
                 <div className="step-progress">
@@ -272,11 +275,13 @@ const EnhancedHeroSection = () => {
 
       {/* Tech Stack Showcase */}
       <div className="tech-stack-showcase">
-        <h3>⚡ Powered by Modern Technology</h3>
+        <h3><NeonEmoji type="lightning" size={24} color="lime" intensity="high" /> Powered by Modern Technology</h3>
         <div className="tech-grid">
           {techStack.map((tech, index) => (
             <div key={index} className="tech-item" style={{ '--tech-color': tech.color }}>
-              <div className="tech-icon">{tech.icon}</div>
+              <div className="tech-icon">
+                <NeonEmoji type={tech.icon} size={32} color="cyan" intensity="medium" />
+              </div>
               <span className="tech-name">{tech.name}</span>
               <div className="tech-connections">
                 {index < techStack.length - 1 && <div className="connection-line"></div>}
@@ -317,7 +322,7 @@ const EnhancedHeroSection = () => {
         </div>
         
         <div className="local-stats">
-          <h3>🇿🇦 South African Job Market</h3>
+        <h3><NeonEmoji type="sa-flag" size={24} color="multi" intensity="high" /> South African Job Market</h3>
           <div className="stats-grid">
             <div className="stat-item">
               <div className="stat-number">{jobStats.active.toLocaleString()}+</div>
@@ -337,20 +342,26 @@ const EnhancedHeroSection = () => {
 
       {/* Job Matching Algorithm Visualization */}
       <div className="algorithm-visualization">
-        <h3>🧠 AI Matching Algorithm</h3>
+        <h3><NeonEmoji type="brain" size={24} color="magenta" intensity="high" /> AI Matching Algorithm</h3>
         <div className="algorithm-flow">
           <div className="flow-step">
-            <div className="flow-icon">📄</div>
+            <div className="flow-icon">
+              <NeonEmoji type="briefcase" size={28} color="cyan" intensity="medium" />
+            </div>
             <div className="flow-text">Your Profile</div>
           </div>
           <div className="flow-arrow">→</div>
           <div className="flow-step active">
-            <div className="flow-icon">🤖</div>
+            <div className="flow-icon">
+              <NeonEmoji type="brain" size={28} color="magenta" intensity="high" />
+            </div>
             <div className="flow-text">AI Analysis</div>
           </div>
           <div className="flow-arrow">→</div>
           <div className="flow-step">
-            <div className="flow-icon">🎯</div>
+            <div className="flow-icon">
+              <NeonEmoji type="target" size={28} color="lime" intensity="high" />
+            </div>
             <div className="flow-text">Perfect Matches</div>
           </div>
         </div>
@@ -358,9 +369,15 @@ const EnhancedHeroSection = () => {
 
       {/* Enhanced User Interaction Controls */}
       <div className="interaction-controls">
-        <button className="control-btn play-pause">⏯️</button>
-        <button className="control-btn expand-code">🔍</button>
-        <button className="control-btn speed-control">⚡</button>
+        <button className="control-btn play-pause">
+          <NeonEmoji type="play" size={16} color="cyan" intensity="medium" />
+        </button>
+        <button className="control-btn expand-code">
+          <NeonEmoji type="search" size={16} color="magenta" intensity="medium" />
+        </button>
+        <button className="control-btn speed-control">
+          <NeonEmoji type="lightning" size={16} color="lime" intensity="high" />
+        </button>
       </div>
     </section>
   );

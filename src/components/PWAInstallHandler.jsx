@@ -1,4 +1,4 @@
-/* 🚀 PWA INSTALL HANDLER - IMMEDIATE PRIORITY 🚀 */
+/* PWA INSTALL HANDLER - IMMEDIATE PRIORITY */
 /* TARGET: 60% higher install rate with smart prompting */
 /* STRATEGY: Dual CTA - "Install PWA" + "Start Free Trial" */
 
@@ -21,7 +21,7 @@ const PWAInstallHandler = () => {
 
     // Listen for beforeinstallprompt event
     const handleBeforeInstallPrompt = (e) => {
-      console.log('🚀 [PWA] beforeinstallprompt event captured');
+    console.log('[PWA] beforeinstallprompt event captured');
       
       // Prevent Chrome 67 and earlier from automatically showing the prompt
       e.preventDefault();
@@ -41,7 +41,7 @@ const PWAInstallHandler = () => {
 
     // Listen for app installed event
     const handleAppInstalled = (e) => {
-      console.log('✅ [PWA] App successfully installed');
+      console.log('[PWA] App successfully installed');
       setIsInstalled(true);
       setShowInstallPrompt(false);
       
@@ -71,7 +71,7 @@ const PWAInstallHandler = () => {
 
   const handleInstallClick = async () => {
     if (!deferredPrompt) {
-      console.log('⚠️ [PWA] No install prompt available');
+      console.log('[PWA] No install prompt available');
       return;
     }
 
@@ -81,10 +81,10 @@ const PWAInstallHandler = () => {
     // Wait for the user to respond to the prompt
     const { outcome } = await deferredPrompt.userChoice;
     
-    console.log(`👤 [PWA] User choice: ${outcome}`);
+    console.log(`[PWA] User choice: ${outcome}`);
     
     if (outcome === 'accepted') {
-      console.log('✅ [PWA] User accepted the install prompt');
+      console.log('[PWA] User accepted the install prompt');
       
       // Analytics: Track install acceptance
       if (typeof window.gtag !== 'undefined') {
@@ -95,7 +95,7 @@ const PWAInstallHandler = () => {
         });
       }
     } else {
-      console.log('❌ [PWA] User dismissed the install prompt');
+      console.log('[PWA] User dismissed the install prompt');
       
       // Analytics: Track install dismissal
       if (typeof window.gtag !== 'undefined') {
@@ -139,8 +139,8 @@ const PWAInstallHandler = () => {
     } else {
       // Show instructions for manual install
       alert(
-        '📱 To install AI Job Chommie:\n\n' +
-        '• Chrome/Edge: Click the ⊕ icon in the address bar\n' +
+        'To install AI Job Chommie:\n\n' +
+        '• Chrome/Edge: Click the + icon in the address bar\n' +
         '• Safari: Tap Share → Add to Home Screen\n' +
         '• Firefox: Look for "Install" in the menu'
       );
@@ -152,7 +152,7 @@ const PWAInstallHandler = () => {
     return (
       <div className="pwa-status installed">
         <span style={{ color: 'var(--primary-cyan)', fontSize: '0.9rem' }}>
-          ✅ App Installed
+          ✓ App Installed
         </span>
       </div>
     );
@@ -248,7 +248,7 @@ const PWAInstallHandler = () => {
                 margin: '0 auto',
                 boxShadow: '0 10px 30px rgba(0, 255, 255, 0.3)'
               }}>
-                🚀
+                ⚡
               </div>
             </div>
 
@@ -269,7 +269,7 @@ const PWAInstallHandler = () => {
               lineHeight: '1.6',
               fontSize: '1rem'
             }}>
-              🚀 Get instant access to your job search companion!
+              Get instant access to your job search companion!
               <br />
               ⚡ Works offline • 📱 One-tap access • 🔔 Job alerts
             </p>
@@ -284,7 +284,7 @@ const PWAInstallHandler = () => {
               fontSize: '0.9rem'
             }}>
               <div style={{ color: 'var(--primary-cyan)', marginBottom: '0.5rem' }}>
-                ✨ Why install?
+                Why install?
               </div>
               <div style={{ color: 'var(--text-secondary)' }}>
                 • Faster loading & offline access<br />

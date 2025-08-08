@@ -3,6 +3,7 @@
 /* METRICS: Prominently display above fold for investor appeal */
 
 import React, { useState, useEffect } from 'react';
+import NeonEmoji from './NeonEmoji';
 
 const InvestorTractionSection = ({ compact = false, animated = true }) => {
   const [currentMetrics, setCurrentMetrics] = useState({
@@ -80,7 +81,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
 
   const metrics = [
     {
-      icon: '👥',
+      icon: 'users',
       label: 'Active Users',
       value: formatNumber(currentMetrics.users) + '+',
       description: 'Growing monthly user base',
@@ -88,7 +89,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
       category: 'users'
     },
     {
-      icon: '🎯',
+      icon: 'target',
       label: 'Jobs Matched Daily',
       value: currentMetrics.jobsMatched + '+',
       description: 'Successful job placements',
@@ -96,7 +97,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
       category: 'matching'
     },
     {
-      icon: '✅',
+      icon: 'checkmark',
       label: 'Success Rate',
       value: currentMetrics.successRate + '%',
       description: 'User placement success',
@@ -104,7 +105,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
       category: 'performance'
     },
     {
-      icon: '💰',
+      icon: 'money',
       label: 'ARR',
       value: formatCurrency(currentMetrics.revenue),
       description: 'Annual recurring revenue',
@@ -112,7 +113,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
       category: 'revenue'
     },
     {
-      icon: '📈',
+      icon: 'chart',
       label: 'Monthly Growth',
       value: currentMetrics.monthlyGrowth + '%',
       description: 'User acquisition rate',
@@ -120,7 +121,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
       category: 'growth'
     },
     {
-      icon: '🏢',
+      icon: 'handshake',
       label: 'Partner Companies',
       value: currentMetrics.partnerCompanies + '+',
       description: 'Hiring partner network',
@@ -128,7 +129,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
       category: 'partnerships'
     },
     {
-      icon: '💵',
+      icon: 'coins',
       label: 'Avg Salary Increase',
       value: currentMetrics.avgSalaryIncrease + '%',
       description: 'User income improvement',
@@ -136,7 +137,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
       category: 'impact'
     },
     {
-      icon: '🔄',
+      icon: 'trending',
       label: 'User Retention',
       value: currentMetrics.userRetention + '%',
       description: '6-month retention rate',
@@ -157,7 +158,12 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
         {/* Header */}
         <div className="traction-header">
           <h2 className="traction-title">
-            {compact ? '📊 Traction Metrics' : '🚀 Investor Traction Dashboard'}
+            <NeonEmoji 
+              type={compact ? 'chart' : 'rocket'} 
+              size={compact ? 20 : 28} 
+              color="cyan" 
+              intensity="high" 
+            /> {compact ? ' Traction Metrics' : ' Investor Traction Dashboard'}
           </h2>
           {!compact && (
             <p className="traction-subtitle">
@@ -170,19 +176,19 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
         {!compact && (
           <div className="highlights-banner">
             <div className="highlight-item">
-              <span className="highlight-icon">🎯</span>
+              <NeonEmoji type="target" size={18} color="magenta" intensity="medium" className="highlight-icon" />
               <span className="highlight-text">Product-Market Fit Achieved</span>
             </div>
             <div className="highlight-item">
-              <span className="highlight-icon">💰</span>
+              <NeonEmoji type="money" size={18} color="lime" intensity="medium" className="highlight-icon" />
               <span className="highlight-text">Revenue Positive</span>
             </div>
             <div className="highlight-item">
-              <span className="highlight-icon">📈</span>
+              <NeonEmoji type="chart" size={18} color="cyan" intensity="medium" className="highlight-icon" />
               <span className="highlight-text">45% YoY Growth</span>
             </div>
             <div className="highlight-item">
-              <span className="highlight-icon">🇿🇦</span>
+              <NeonEmoji type="sa-flag" size={18} color="multi" intensity="high" className="highlight-icon" />
               <span className="highlight-text">SA Market Leader</span>
             </div>
           </div>
@@ -195,7 +201,9 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
               key={metric.category}
               className={`metric-card ${animated && animationStage >= index % 4 ? 'animate-in' : ''}`}
             >
-              <div className="metric-icon">{metric.icon}</div>
+              <div className="metric-icon">
+                <NeonEmoji type={metric.icon} size={32} color="cyan" intensity="high" />
+              </div>
               <div className="metric-content">
                 <div className="metric-value">{metric.value}</div>
                 <div className="metric-label">{metric.label}</div>
@@ -203,7 +211,7 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
                   <>
                     <div className="metric-description">{metric.description}</div>
                     <div className="metric-trend">
-                      <span className="trend-indicator">📈</span>
+                      <NeonEmoji type="trending" size={14} color="lime" intensity="medium" className="trend-indicator" />
                       <span className="trend-value">{metric.trend}</span>
                     </div>
                   </>
@@ -216,31 +224,41 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
         {/* Investment Readiness Indicators */}
         {!compact && (
           <div className="investment-readiness">
-            <h3 className="readiness-title">🔥 Investment Readiness</h3>
+            <h3 className="readiness-title">
+              <NeonEmoji type="fire" size={24} color="orange" intensity="high" /> Investment Readiness
+            </h3>
             <div className="readiness-grid">
               <div className="readiness-item">
-                <div className="readiness-check">✅</div>
+                <div className="readiness-check">
+                  <NeonEmoji type="checkmark" size={20} color="lime" intensity="high" />
+                </div>
                 <div className="readiness-text">
                   <strong>Scalable Technology</strong>
                   <p>AI-powered platform with cloud infrastructure</p>
                 </div>
               </div>
               <div className="readiness-item">
-                <div className="readiness-check">✅</div>
+                <div className="readiness-check">
+                  <NeonEmoji type="checkmark" size={20} color="lime" intensity="high" />
+                </div>
                 <div className="readiness-text">
                   <strong>Market Validation</strong>
                   <p>10k+ users, 95% success rate, positive unit economics</p>
                 </div>
               </div>
               <div className="readiness-item">
-                <div className="readiness-check">✅</div>
+                <div className="readiness-check">
+                  <NeonEmoji type="checkmark" size={20} color="lime" intensity="high" />
+                </div>
                 <div className="readiness-text">
                   <strong>Revenue Model</strong>
                   <p>Subscription-based SaaS with proven conversion rates</p>
                 </div>
               </div>
               <div className="readiness-item">
-                <div className="readiness-check">✅</div>
+                <div className="readiness-check">
+                  <NeonEmoji type="checkmark" size={20} color="lime" intensity="high" />
+                </div>
                 <div className="readiness-text">
                   <strong>Growth Potential</strong>
                   <p>Total addressable market: R2.4B in SA job market</p>
@@ -261,14 +279,14 @@ const InvestorTractionSection = ({ compact = false, animated = true }) => {
                   href="mailto:investors@aijobchommie.co.za?subject=Investment%20Inquiry"
                   className="cta-button primary"
                 >
-                  📧 Contact Investors Team
+                  <NeonEmoji type="email" size={16} color="cyan" intensity="medium" /> Contact Investors Team
                 </a>
                 <a 
                   href="/pitch-deck.pdf" 
                   target="_blank"
                   className="cta-button secondary"
                 >
-                  📊 View Pitch Deck
+                  <NeonEmoji type="chart" size={16} color="magenta" intensity="medium" /> View Pitch Deck
                 </a>
               </div>
             </div>

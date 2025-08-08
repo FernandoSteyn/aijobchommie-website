@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import ParticleSystem from '../components/ParticleSystem';
 import GeometricBackground from '../components/GeometricBackground';
+import NeonEmoji from '../components/NeonEmoji';
 
 const PricingPage = () => {
   return (
@@ -73,17 +74,33 @@ const PricingPage = () => {
               <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--neon-cyan)', marginBottom: '10px' }}>
                 R8<span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>/month</span>
               </div>
-              <p style={{ marginBottom: '20px', color: 'var(--neon-green)', fontWeight: 'bold' }}>✨ 3-Day Free Trial</p>
+              <p style={{ marginBottom: '20px', color: 'var(--neon-green)', fontWeight: 'bold' }}>
+                <NeonEmoji type="free" size={18} color="lime" intensity="high" /> 3-Day Free Trial
+              </p>
               <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>Perfect for active job seekers</p>
               
               <ul style={{ textAlign: 'left', marginBottom: '30px', listStyle: 'none' }}>
-                <li style={{ marginBottom: '10px' }}>✅ 10 job applications per month</li>
-                <li style={{ marginBottom: '10px' }}>✅ AI-powered job matching</li>
-                <li style={{ marginBottom: '10px' }}>✅ Real-time notifications</li>
-                <li style={{ marginBottom: '10px' }}>✅ Basic AI cover letter assistance</li>
-                <li style={{ marginBottom: '10px' }}>✅ CV optimization tips</li>
-                <li style={{ marginBottom: '10px' }}>✅ Email support</li>
-                <li style={{ marginBottom: '10px' }}>✅ Mobile PWA access</li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> 10 job applications per month
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> AI-powered job matching
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Real-time notifications
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Basic AI cover letter assistance
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> CV optimization tips
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Email support
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Mobile PWA access
+                </li>
                 <li style={{ marginBottom: '10px', color: 'var(--text-muted)' }}>❌ Advanced analytics</li>
                 <li style={{ marginBottom: '10px', color: 'var(--text-muted)' }}>❌ Priority support</li>
                 <li style={{ marginBottom: '10px', color: 'var(--text-muted)' }}>❌ Personal career consultant</li>
@@ -113,20 +130,42 @@ const PricingPage = () => {
               <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--neon-pink)', marginBottom: '10px' }}>
                 R17<span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>/month</span>
               </div>
-              <p style={{ marginBottom: '20px', color: 'var(--neon-green)', fontWeight: 'bold' }}>✨ 7-Day Money-Back Guarantee</p>
+              <p style={{ marginBottom: '20px', color: 'var(--neon-green)', fontWeight: 'bold' }}>
+                <NeonEmoji type="star" size={18} color="lime" intensity="high" /> 7-Day Money-Back Guarantee
+              </p>
               <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>For serious career advancement</p>
               
               <ul style={{ textAlign: 'left', marginBottom: '30px', listStyle: 'none' }}>
-                <li style={{ marginBottom: '10px' }}>✅ <strong>Unlimited</strong> job applications</li>
-                <li style={{ marginBottom: '10px' }}>✅ Advanced AI job matching</li>
-                <li style={{ marginBottom: '10px' }}>✅ Instant push notifications</li>
-                <li style={{ marginBottom: '10px' }}>✅ Full AI cover letter generation</li>
-                <li style={{ marginBottom: '10px' }}>✅ Interview preparation & tips</li>
-                <li style={{ marginBottom: '10px' }}>✅ Advanced career analytics</li>
-                <li style={{ marginBottom: '10px' }}>✅ Priority WhatsApp support</li>
-                <li style={{ marginBottom: '10px' }}>✅ Salary negotiation guidance</li>
-                <li style={{ marginBottom: '10px' }}>✅ Personal career consultant</li>
-                <li style={{ marginBottom: '10px' }}>✅ Resume builder & templates</li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> <strong>Unlimited</strong> job applications
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Advanced AI job matching
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Instant push notifications
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Full AI cover letter generation
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Interview preparation & tips
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Advanced career analytics
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Priority WhatsApp support
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Salary negotiation guidance
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Personal career consultant
+                </li>
+                <li style={{ marginBottom: '10px' }}>
+                  <NeonEmoji type="checkmark" size={16} color="lime" intensity="medium" /> Resume builder & templates
+                </li>
               </ul>
               
               <Link to="#" className="btn btn-primary" style={{ width: '100%', background: 'linear-gradient(45deg, var(--neon-pink), var(--neon-blue))', marginBottom: '10px' }}>Start Your Journey</Link>
@@ -153,7 +192,9 @@ const PricingPage = () => {
               <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--neon-orange)', marginBottom: '10px' }}>
                 Coming<span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}> Soon</span>
               </div>
-              <p style={{ marginBottom: '20px', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>🚧 Currently in Development</p>
+              <p style={{ marginBottom: '20px', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>
+                <NeonEmoji type="gear" size={18} color="orange" intensity="high" /> Currently in Development
+              </p>
               <p style={{ marginBottom: '30px', color: 'var(--text-secondary)' }}>Advanced features for enterprises will be available soon</p>
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-lg)', textAlign: 'left' }}>
@@ -202,21 +243,27 @@ const PricingPage = () => {
           
           <div className="grid grid-3" style={{ gap: 'var(--space-xl)' }}>
             <div className="card" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>⚡</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>
+                <NeonEmoji type="lightning" size={48} color="lime" intensity="high" />
+              </div>
               <h3 style={{ color: 'var(--primary-cyan)', marginBottom: 'var(--space-md)' }}>Lightning Fast</h3>
               <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
                 Traditional job boards take weeks to show results. Our AI matches you with perfect opportunities in seconds, not months.
               </p>
             </div>
             <div className="card" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>💰</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>
+                <NeonEmoji type="money" size={48} color="lime" intensity="high" />
+              </div>
               <h3 style={{ color: 'var(--accent-lime)', marginBottom: 'var(--space-md)' }}>50x More Affordable</h3>
               <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
                 Recruitment agencies charge R400-R2000/month. Get superior AI technology starting at just R8/month with no hidden fees.
               </p>
             </div>
             <div className="card" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>🎯</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>
+                <NeonEmoji type="target" size={48} color="magenta" intensity="high" />
+              </div>
               <h3 style={{ color: 'var(--primary-magenta)', marginBottom: 'var(--space-md)' }}>Precision Matching</h3>
               <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
                 Stop applying to irrelevant jobs. Our AI analyzes your skills and matches you with positions where you'll actually get hired.

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-// 🎯 STRATEGIC ADVERTISEMENT BANNER COMPONENT
+// STRATEGIC ADVERTISEMENT BANNER COMPONENT
 // Designed for maximum conversion with cyberpunk aesthetics
 const AdvertisementBanner = ({ 
   position = 'hero-overlay', 
@@ -165,7 +165,7 @@ const AdvertisementBanner = ({
   );
 };
 
-// 🏆 STRATEGIC AD PLACEMENTS WRAPPER COMPONENT
+// STRATEGIC AD PLACEMENTS WRAPPER COMPONENT
 export const StrategicAdPlacements = ({ ads = {} }) => {
   return (
     <>
@@ -202,7 +202,7 @@ export const StrategicAdPlacements = ({ ads = {} }) => {
   );
 };
 
-// 🎯 INLINE AD COMPONENTS FOR CONTENT SECTIONS
+// INLINE AD COMPONENTS FOR CONTENT SECTIONS
 export const InlineAdBanner = ({ adData, className = '' }) => (
   <AdvertisementBanner
     position="section-break"

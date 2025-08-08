@@ -1,39 +1,39 @@
-// 🎯 STRATEGIC ADVERTISEMENT CONFIGURATION
+// STRATEGIC ADVERTISEMENT CONFIGURATION
 // Genius placement strategy for maximum conversion
 
 export const adConfigurations = {
-  // 🚀 LAUNCH PHASE ADS (Pre-August 30, 2025)
+  // LAUNCH PHASE ADS (Pre-August 30, 2025)
   launchPhase: {
     heroOverlay: {
-      title: '🎉 EARLY BIRD SPECIAL',
+      title: 'EARLY BIRD SPECIAL',
       description: 'Get 50% off your first 3 months when you sign up for early access!',
       cta: 'Claim Early Bird Deal',
       link: '/early-access',
-      icon: '⚡',
+      icon: 'flash',
       priority: 'high'
     },
     
     floatingCorner: [
       {
-        title: '📱 PWA Coming Soon',
+        title: 'PWA Coming Soon',
         description: 'Native app experience without the app store',
         cta: 'Get Notified',
         link: '/early-access',
-        icon: '🚀'
+        icon: 'mobile'
       },
       {
-        title: '🤖 AI-Powered Jobs',
+        title: 'AI-Powered Jobs',
         description: 'Smart matching technology finds your perfect role',
         cta: 'Learn More',
         link: '/about',
-        icon: '🎯'
+        icon: 'target'
       },
       {
-        title: '💎 Premium Features',
+        title: 'Premium Features',
         description: 'Advanced analytics & personalized insights',
         cta: 'View Plans',
         link: '/pricing',
-        icon: '👑'
+        icon: 'crown'
       }
     ],
 
@@ -42,137 +42,137 @@ export const adConfigurations = {
       description: 'Reserve your spot with 3-day free trial',
       cta: 'Reserve Now',
       link: '/pricing',
-      icon: '⏰'
+      icon: 'clock'
     }
   },
 
-  // 🏆 POST-LAUNCH PHASE ADS
+  // POST-LAUNCH PHASE ADS
   postLaunch: {
     heroOverlay: {
-      title: '🎊 WE\'RE LIVE!',
+      title: 'WE\'RE LIVE!',
       description: 'Download the AI Job Chommie PWA now and find your dream job today',
       cta: 'Download PWA',
       link: '/app-download',
-      icon: '📲',
+      icon: 'phone',
       priority: 'critical'
     },
 
     floatingCorner: [
       {
-        title: '🔥 Trending Jobs',
+        title: 'Trending Jobs',
         description: 'See the hottest opportunities in your area',
         cta: 'Browse Jobs',
         link: '/jobs',
-        icon: '📈'
+        icon: 'trending-up'
       },
       {
-        title: '💼 Career Boost',
+        title: 'Career Boost',
         description: 'Premium features for serious job seekers',
         cta: 'Upgrade Now',
         link: '/pricing',
-        icon: '🚀'
+        icon: 'briefcase'
       }
     ],
 
     mobileBanner: {
-      title: '📱 Add to Home Screen',
+      title: 'Add to Home Screen',
       description: 'Install our PWA for the best experience',
       cta: 'Install Now',
       link: '#pwa-install',
-      icon: '⬇️'
+      icon: 'download'
     }
   },
 
-  // 🎨 PARTNERSHIP & SPONSOR ADS
+  // PARTNERSHIP & SPONSOR ADS
   partnerships: {
     // Corporate training programs
     corporateTraining: {
-      title: '🏢 Corporate Training',
+      title: 'Corporate Training',
       description: 'Upskill your team with our AI-powered career development',
       cta: 'Contact Sales',
       link: '/enterprise',
-      icon: '🎓',
+      icon: 'building',
       priority: 'medium'
     },
 
     // University partnerships
     universityPartnership: {
-      title: '🎓 Student Special',
+      title: 'Student Special',
       description: 'Free 6-month access for verified students',
       cta: 'Verify Student Status',
       link: '/student-discount',
-      icon: '📚',
+      icon: 'graduation-cap',
       priority: 'high'
     },
 
     // Recruitment agency partnerships
     recruitmentAgencies: {
-      title: '🤝 Recruiter Tools',
+      title: 'Recruiter Tools',
       description: 'Advanced candidate matching for recruitment professionals',
       cta: 'Partner With Us',
       link: '/recruiter-partnership',
-      icon: '🔍',
+      icon: 'search',
       priority: 'medium'
     }
   },
 
-  // 🌟 SEASONAL & EVENT-BASED ADS
+  // SEASONAL & EVENT-BASED ADS
   seasonal: {
     // New Year career resolutions
     newYear: {
-      title: '🎊 New Year, New Career',
+      title: 'New Year, New Career',
       description: 'Start 2025 with your dream job - Limited time offer!',
       cta: 'Transform Your Career',
       link: '/new-year-special',
-      icon: '✨',
+      icon: 'star',
       priority: 'high',
       validPeriod: { start: '2025-01-01', end: '2025-01-31' }
     },
 
     // Mid-year career boost
     midYear: {
-      title: '📈 Mid-Year Career Boost',
+      title: 'Mid-Year Career Boost',
       description: 'Don\'t wait for January - upgrade your career now!',
       cta: 'Boost Your Career',
       link: '/mid-year-boost',
-      icon: '🚀',
+      icon: 'trending-up',
       priority: 'medium',
       validPeriod: { start: '2025-06-01', end: '2025-07-31' }
     }
   },
 
-  // 🎯 CONTENT SECTION ADS (Inline placements)
+  // CONTENT SECTION ADS (Inline placements)
   contentSection: {
     betweenFeatures: {
-      title: '💡 Pro Tip',
+      title: 'Pro Tip',
       description: 'Upgrade to Premium for AI-powered interview prep and salary negotiation tips',
       cta: 'Unlock Pro Features',
       link: '/pricing',
-      icon: '🧠',
+      icon: 'lightbulb',
       priority: 'low'
     },
 
     beforeTestimonials: {
-      title: '🌟 Join Success Stories',
+      title: 'Join Success Stories',
       description: 'Thousands of South Africans have found their dream jobs with us',
       cta: 'Start Your Journey',
       link: '/success-stories',
-      icon: '🏆',
+      icon: 'trophy',
       priority: 'medium'
     },
 
     beforePricing: {
-      title: '💰 Value Calculator',
+      title: 'Value Calculator',
       description: 'See how much your career could be worth with our AI matching',
       cta: 'Calculate Value',
       link: '/career-calculator',
-      icon: '📊',
+      icon: 'calculator',
       priority: 'high'
     }
   }
 };
 
-// 🧠 GENIUS AD PLACEMENT STRATEGY LOGIC
+// GENIUS AD PLACEMENT STRATEGY LOGIC
 export class AdPlacementStrategy {
   constructor() {
     this.viewportHeight = window.innerHeight;
@@ -315,17 +315,17 @@ export class AdPlacementStrategy {
   }
 }
 
-// 🎪 AD CONTENT VARIATIONS FOR A/B TESTING
+// AD CONTENT VARIATIONS FOR A/B TESTING
 export const adVariations = {
   heroOverlay: {
     A: {
-      title: '🚀 Launch Special - 50% Off',
+      title: 'Launch Special - 50% Off',
       description: 'Early bird pricing for the first 1000 users',
       cta: 'Get Early Access',
       urgency: 'high'
     },
     B: {
-      title: '⚡ Transform Your Career Today',
+      title: 'Transform Your Career Today',
       description: 'Join thousands finding their dream jobs with AI',
       cta: 'Start Free Trial',
       urgency: 'medium'

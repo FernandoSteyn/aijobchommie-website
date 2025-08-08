@@ -23,8 +23,8 @@ const AnnouncementBanner = () => {
         animation: 'shimmer 3s infinite'
       }}></div>
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-         <strong>🔥 PROUDLY SOUTH AFRICAN:</strong> <span className="sa-flag-accent">AI Job Chommie PWA App</span> - Currently in final testing & refinement phase! 
-        <span style={{ margin: '0 10px', fontSize: '1.2rem' }}>🇿🇦</span>
+         <strong>PROUDLY SOUTH AFRICAN:</strong> <span className="sa-flag-accent">AI Job Chommie PWA App</span> - Currently in final testing & refinement phase! 
+        <span style={{ margin: '0 10px', fontSize: '1.2rem' }}>SA</span>
         A <span className="partnership-ready" style={{ padding: '2px 8px', borderRadius: '10px' }}>TIA.org.za Partnership Ready</span> revolution in job searching launches soon!
       </div>
       <style jsx>{`

@@ -69,7 +69,7 @@ const MissionPage = () => {
           <div className="grid grid-2" style={{ gap: 'var(--space-4xl)' }}>
             
             <div className="card hover-card" style={{ border: '2px solid var(--primary-cyan)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', textAlign: 'center' }}>🎯</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', textAlign: 'center', color: 'var(--primary-cyan)' }}>◉</div>
               <h3 style={{ color: 'var(--primary-cyan)', marginBottom: 'var(--space-md)' }}>Unemployment Reduction</h3>
               <p style={{ marginBottom: 'var(--space-md)' }}>
                 <strong>Target:</strong> Help reduce South Africa's unemployment rate by connecting 100,000 job seekers 
@@ -77,22 +77,22 @@ const MissionPage = () => {
               </p>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🌟</span>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>•</span>
                   Priority focus on youth employment (18-35 years)
                 </li>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🌟</span>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>•</span>
                   Special programs for rural and township communities
                 </li>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🌟</span>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>•</span>
                   Support for first-time job seekers and career changers
                 </li>
               </ul>
             </div>
 
             <div className="card hover-card" style={{ border: '2px solid var(--primary-magenta)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', textAlign: 'center' }}>🔗</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', textAlign: 'center', color: 'var(--primary-magenta)' }}>⚒</div>
               <h3 style={{ color: 'var(--primary-magenta)', marginBottom: 'var(--space-md)' }}>Skills Gap Bridging</h3>
               <p style={{ marginBottom: 'var(--space-md)' }}>
                 <strong>Goal:</strong> Use AI-powered insights to identify and bridge critical skills gaps 
@@ -100,22 +100,22 @@ const MissionPage = () => {
               </p>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🌟</span>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>•</span>
                   Real-time skills demand analysis
                 </li>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🌟</span>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>•</span>
                   Partnerships with training providers
                 </li>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>🌟</span>
+                  <span style={{ color: 'var(--accent-lime)', marginRight: 'var(--space-sm)' }}>•</span>
                   Personalized upskilling recommendations
                 </li>
               </ul>
             </div>
 
             <div className="card hover-card" style={{ border: '2px solid var(--accent-lime)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', textAlign: 'center' }}>🏆</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', textAlign: 'center', color: 'var(--accent-lime)' }}>▲</div>
               <h3 style={{ color: 'var(--accent-lime)', marginBottom: 'var(--space-md)' }}>Youth Employment Initiative</h3>
               <p style={{ marginBottom: 'var(--space-md)' }}>
                 <strong>Mission:</strong> Create specialized pathways for young South Africans entering the job market, 
@@ -123,22 +123,22 @@ const MissionPage = () => {
               </p>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-violet)', marginRight: 'var(--space-sm)' }}>💎</span>
+                  <span style={{ color: 'var(--accent-violet)', marginRight: 'var(--space-sm)' }}>•</span>
                   Free access for students and recent graduates
                 </li>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-violet)', marginRight: 'var(--space-sm)' }}>💎</span>
+                  <span style={{ color: 'var(--accent-violet)', marginRight: 'var(--space-sm)' }}>•</span>
                   Career guidance and interview preparation
                 </li>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--accent-violet)', marginRight: 'var(--space-sm)' }}>💎</span>
+                  <span style={{ color: 'var(--accent-violet)', marginRight: 'var(--space-sm)' }}>•</span>
                   Mentorship programs with industry professionals
                 </li>
               </ul>
             </div>
 
             <div className="card hover-card" style={{ border: '2px solid var(--accent-violet)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', textAlign: 'center' }}>🌍</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', textAlign: 'center', color: 'var(--accent-violet)' }}>●</div>
               <h3 style={{ color: 'var(--accent-violet)', marginBottom: 'var(--space-md)' }}>Rural Economic Empowerment</h3>
               <p style={{ marginBottom: 'var(--space-md)' }}>
                 <strong>Commitment:</strong> Extend quality job opportunities beyond urban centers, 
@@ -146,15 +146,15 @@ const MissionPage = () => {
               </p>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--primary-cyan)', marginRight: 'var(--space-sm)' }}>⭐</span>
+                  <span style={{ color: 'var(--primary-cyan)', marginRight: 'var(--space-sm)' }}>•</span>
                   Mobile-optimized platform for limited connectivity
                 </li>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--primary-cyan)', marginRight: 'var(--space-sm)' }}>⭐</span>
+                  <span style={{ color: 'var(--primary-cyan)', marginRight: 'var(--space-sm)' }}>•</span>
                   Local language support for all official languages
                 </li>
                 <li style={{ marginBottom: 'var(--space-sm)', display: 'flex', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--primary-cyan)', marginRight: 'var(--space-sm)' }}>⭐</span>
+                  <span style={{ color: 'var(--primary-cyan)', marginRight: 'var(--space-sm)' }}>•</span>
                   Partnerships with rural employers and cooperatives
                 </li>
               </ul>
@@ -183,7 +183,7 @@ const MissionPage = () => {
             </div>
             
             <div className="card" style={{ background: 'linear-gradient(135deg, rgba(157, 0, 255, 0.1), rgba(0, 255, 65, 0.1))' }}>
-              <h3 style={{ color: 'var(--accent-violet)', marginBottom: 'var(--space-md)' }}>🤝 Partnership Impact</h3>
+              <h3 style={{ color: 'var(--accent-violet)', marginBottom: 'var(--space-md)' }}>Partnership Impact</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 'var(--space-sm)', background: 'rgba(0, 0, 0, 0.2)', borderRadius: 'var(--radius-sm)' }}>
                   <span>Universities & Colleges</span>
@@ -216,7 +216,7 @@ const MissionPage = () => {
 
           <div className="grid grid-3" style={{ marginBottom: 'var(--space-4xl)' }}>
             <div className="card" style={{ textAlign: 'center', border: '2px solid var(--primary-cyan)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>📈</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', color: 'var(--primary-cyan)' }}>↗</div>
               <h3 style={{ color: 'var(--primary-cyan)', marginBottom: 'var(--space-sm)' }}>Employment Rate</h3>
               <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--primary-cyan)', marginBottom: 'var(--space-sm)' }}>87%</div>
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
@@ -225,7 +225,7 @@ const MissionPage = () => {
             </div>
 
             <div className="card" style={{ textAlign: 'center', border: '2px solid var(--primary-magenta)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>💰</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', color: 'var(--primary-magenta)' }}>$</div>
               <h3 style={{ color: 'var(--primary-magenta)', marginBottom: 'var(--space-sm)' }}>Salary Improvement</h3>
               <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--primary-magenta)', marginBottom: 'var(--space-sm)' }}>34%</div>
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
@@ -234,7 +234,7 @@ const MissionPage = () => {
             </div>
 
             <div className="card" style={{ textAlign: 'center', border: '2px solid var(--accent-lime)' }}>
-              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>⏱️</div>
+              <div style={{ fontSize: '3rem', marginBottom: 'var(--space-md)', color: 'var(--accent-lime)' }}>⏱</div>
               <h3 style={{ color: 'var(--accent-lime)', marginBottom: 'var(--space-sm)' }}>Time to Employment</h3>
               <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--accent-lime)', marginBottom: 'var(--space-sm)' }}>21</div>
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
@@ -256,10 +256,10 @@ const MissionPage = () => {
             </p>
             <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/pricing" className="btn btn-primary" style={{ fontSize: '1.1rem' }}>
-                🚀 Start Your Journey
+                Start Your Journey
               </Link>
               <Link to="/about" className="btn btn-secondary" style={{ fontSize: '1.1rem' }}>
-                📚 Learn More About Us
+                Learn More About Us
               </Link>
             </div>
           </div>
